@@ -19,7 +19,6 @@ body {
     background: url("../img/pink-planet.png") 50% 30% no-repeat content-box,
         linear-gradient(108deg, rgba(23, 26, 28, 0.72) 0%, #5E5E57 100%);
     background-size: cover;
-    border: 1px solid orange;
 }
 
 .body-page {
@@ -165,7 +164,6 @@ header {
 }
 
 .page-main-index {
-    border: 1px solid red;
     margin-bottom:  20px;
     margin-left: 120px;
     margin-right: 508px;
