@@ -19,7 +19,6 @@ body {
     background: url("../img/pink-planet.png") 50% 30% no-repeat content-box,
         linear-gradient(108deg, rgba(23, 26, 28, 0.72) 0%, #5E5E57 100%);
     background-size: cover;
-
 }
 
 .body-page {
@@ -260,10 +259,13 @@ header {
     width: 100%;
     max-width: 1278px;
     padding-bottom: 20px;
-    display: flex;
     z-index: 0;
+    display: flex;
+    justify-content: space-between;
 }
-
+.empty {
+    width: 76px;
+}
 .sites-logo-group {
     width: 76px;
     display: flex;
