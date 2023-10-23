@@ -1,7 +1,6 @@
 body {
     position: relative;
     height: 100vh;
-    width: 100vw;
     min-width: 380px;
     overflow: auto;
     margin: 0 auto;
@@ -16,9 +15,11 @@ body {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     background: url("../img/pink-planet.png") 50% 30% no-repeat content-box,
         linear-gradient(108deg, rgba(23, 26, 28, 0.72) 0%, #5E5E57 100%);
     background-size: cover;
+
 }
 
 .body-page {
@@ -29,12 +30,25 @@ body {
 }
 
 header {
-    width: inherit;
-    max-width: 1366px;
+    width: 100vw;
+    max-width: 1278px;
+    min-width: 380px;
     padding-top: 40px;
     display: flex;
+    justify-content: center;
+
+}
+.page-header-container{
+    display: flex;
     justify-content: space-between;
-    margin-bottom: 153px;
+    width: 100vw;
+    height: 34px;
+    padding: 0 20px;
+}
+.page-header-nav {
+    max-width: 618px;
+    display: flex;
+
 }
 
 .page-header-product, .page-header-questions, .page-header-technology, .page-header-explanation {
@@ -46,62 +60,56 @@ header {
     padding-left: 26px;
     width: 1304px;
 }
-
-.page-header-nav {
-    width: 100%;
-    max-width: 1238px;
-    margin:0 auto 8px auto;
-    height: 34px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 64px;
-}
 .burger-menu-header {
     display: none;
 }
 .logo {
-    min-width: 193px;
+    max-width: 193px;
     height: 28px;
     text-transform: uppercase;
     display: flex;
     flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: center;
-    justify-content: end;
-    background: url(../img/logo.svg) no-repeat 0 50%;
+    gap:15px;
+    margin-top: 2px;
 }
-.logo:hover{
-    background: url(../img/logo-green.svg) no-repeat 0 50%;
-}
-.logo:hover a {
-    color: #0DD1A2;
-}
-
-.logo {
+.logo-name{
     font-size: 18px;
-    line-height: 21px;
-    letter-spacing: 0.04em;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    font-weight: 500;
+}
+.logo:hover .logo-name{
+    color: #0DD1A2;
+    transition: 0.5s;
+
+}
+.logo:hover .logo-svg-path{
+    fill: #0DD1A2;
+    transition: 0.5s;
 }
 
 .nav-images {
     width:100%;
     max-width: 619px;
-    margin-left: 80px;
-    margin-right: 91px;
-    position: relative;
+    height: min-content;
     padding: 0;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    align-self: center;
     flex-wrap: wrap;
     font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+    margin: auto;
 }
 
 
 .nav-image a,
-.page-header-nav a,
-.page-header-nav button {
+.page-header-container a,
+.page-header-container button {
     color: white;
     text-decoration: none;
     align-self: center;
@@ -112,6 +120,7 @@ header {
 
 .nav-image{
     position: relative;
+    max-height: max-content;
 }
 .nav-image:not(.nav-image:last-of-type){
     margin-right: 34px;
@@ -132,26 +141,31 @@ header {
 }
 .nav-image a:hover{
     color:#0DD1A2;
+    transition: 0.5s;
 }
 .order {
-    min-width: 255px;
+    max-width: 275px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 20px;
 }
 .order-page-header-tel {
     font-weight: 700;
     font-size: 16px;
-    line-height: 18px;
+    line-height: normal;
+    max-width: min-content;
+    text-wrap: nowrap;
 }
 .order-page-header-tel:hover {
     color: #0DD1A2;
+    transition: 0.5s;
 }
 .header-burger-media {
     display: none;
 }
-.page-header-nav button {
+.page-header-container button {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -162,15 +176,18 @@ header {
     border: 2px solid #0DD1A2;
     border-radius: 2px;
 }
-
 .page-main-index {
-    margin-bottom:  20px;
-    margin-left: 120px;
-    margin-right: 508px;
+    width: 100%;
+    max-width: 1278px;
+}
+.page-main-index-container {
+    display: block;
+    padding-left: 77px;
+    color:#FFF;
 }
 
-.page-main-index h1 {
-    width: 738px;
+.page-main-index-container h1 {
+    max-width: 738px;
     font-weight: 400;
     font-size: 96px;
     height: 111px;
@@ -180,7 +197,7 @@ header {
 }
 
 .page-main-index p {
-    width: 494px;
+    max-width: 494px;
     font-weight: 300;
     line-height: 150%;
     margin-top: 0;
@@ -228,6 +245,7 @@ header {
 .button-video:hover {
     background-color: #0DD1A2;
     border: #0DD1A2;
+    transition: 0.5s;
 }
 .popup-video-none {
     display: none;
@@ -240,24 +258,18 @@ header {
 }
 .page-footer {
     width: 100%;
-    max-width: 1366px;
-    position: fixed;
-    justify-content: inherit;
+    max-width: 1278px;
+    padding-bottom: 20px;
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 0;
-    bottom: 20px;
     z-index: 0;
 }
 
-
 .sites-logo-group {
-    margin-left: 63px;
-    margin-right: 399px;
     width: 76px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
 }
 
 .facebook,
@@ -272,14 +284,14 @@ header {
 .facebook:hover,
 .vk:hover {
     opacity: 1;
+    transition: 0.5s;
 }
 
 .scroll-down-index {
-    top:50%;
-    right: 50%;
     padding: 2px 0;
     width: 288px;
     height: 32px;
+    text-align: center;
 }
 
 .scroll-down-index a {
@@ -295,6 +307,7 @@ header {
 
 .scroll-down-index a:hover {
     opacity: 1;
+    transition: 0.5s;
 }
 
 .scroll-down-index a p {
@@ -410,6 +423,7 @@ header {
 }
 .popup-submit:hover {
     opacity: 1;
+    transition: 0.5s;
 }
 
 .popup-confirmation {
@@ -477,6 +491,7 @@ header {
 }
 .button-ok:hover {
     opacity: 1;
+    transition: 0.5s;
 }
 .page-main-product {
     width: 100%;
@@ -608,11 +623,13 @@ header {
 
 .slide-to-right:hover {
     background-image: url(../img/slide-to-right-green.svg);
+    transition: 0.5s;
 }
 
 .slide-to-left:hover {
     background-image: url(../img/slide-to-right-green.svg);
     transform: rotate(180deg);
+    transition: 0.5s;
 }
 
 .scroll-down {
@@ -1096,6 +1113,7 @@ header {
 }
 .contacts-form-button-send:hover {
     background-color: #0DD1A2;
+    transition: 0.5s;
 }
 .page-footer-contacts {
     width: 1366px;
@@ -1118,13 +1136,17 @@ header {
     margin-left: 325px;
 }
 @media (max-width: 1347px) {
-    .nav-images {
+    .page-header-nav, .order-page-header-tel, .logo-name {
         display: none;
+    }
+    .logo {
+        max-width: 28px;
     }
     .burger-menu-header{
         display: flex;
         align-items: center;
     }
+
 }
 /* @media (max-width: 780px) {
     
