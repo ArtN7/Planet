@@ -180,7 +180,8 @@ header {
     max-width: 1278px;
 }
 .page-main-index-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding-left: 77px;
     color:#FFF;
 }
@@ -189,13 +190,13 @@ header {
     max-width: 738px;
     font-weight: 400;
     font-size: 96px;
-    height: 111px;
+    max-height: 111px;
     line-height: 110px;
     margin-top: 0;
     margin-bottom: 24px;
 }
 
-.page-main-index p {
+.page-main-index-container p {
     max-width: 494px;
     font-weight: 300;
     line-height: 150%;
@@ -217,7 +218,9 @@ header {
 .button-video {
     color: white;
 }
-
+.button-order-header{
+    margin-left: 20px;
+}
 .button-order {
     width: 238px;
     height: 68px;
@@ -303,7 +306,6 @@ header {
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
-    color: white;
     opacity: 0.64;
 }
 
@@ -319,6 +321,7 @@ header {
     letter-spacing: 0.12em;
     margin-top: 0;
     margin-bottom: 5px;
+    color: white;
 }
 
 .popup-display-none {
@@ -1148,70 +1151,112 @@ header {
         display: flex;
         align-items: center;
     }
-
-}
-/* @media (max-width: 780px) {
-    
-    .nav-images, .order-page-header-tel, .logo-name, .sites-logo-group{
-        display: none;
+    .popup-video-index{
+        width: 1000px;
     }
+}
+@media (max-width: 1000px) or (max-height: 500px){
     .body-page {
         background:
                     url("../img/blue-moon.png") 50% 40% no-repeat fixed;
         background-size: cover;
+    }
+    .popup-video-index{
+        width: 700px;
+    }
+}
+@media (max-width: 800px) or (max-height: 500px){
+    .page-main-index-container h1 {
+        font-size: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .page-main-index-container{
+        padding-left: 0;
+        text-align: center;
+    }
+    .page-main-index-container p{
+        margin: 24px auto 71px;
+    }
+    .button-group{
+        justify-content: space-around;
+    }
+    .button-video{
+        width: 238px;
+    }
+    .popup-video-index{
+        width: 500px;
+    }
 
+}
+@media (max-width: 600px) {
+    .page-main-index-container h1{
+        font-size: 75px;
     }
-    body {
-        width: 100vw;
-        margin: auto;
-       width: min-content;
-       height: min-content;
-       border: 1px solid orange;
-       
+}
+@media (max-width: 550px) {
+    .page-main-index-container h1{
+        font-size: 70px;
     }
-    header {
-        width: max-content;
-        margin: auto;
-        margin-bottom: 90px;
-        border: 1px solid red;
+}
+@media (max-width: 500px) {
+    .page-main-index-container h1{
+        font-size: 55px;
     }
-    .header-burger-media {
-        display: block;
+    .page-main-index-container p{
+        padding: 0 10px;
     }
-    .page-main-index {
-        min-width: 288px;
-        font-size: 15px;
-        line-height: 137.88%; 
-        margin: auto;
-        margin-top: 0;
-        margin-bottom: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .page-main-index-container{
+        padding: 10px 0;
     }
-    .page-main-index p {
-        min-width: 225px;
-
+    .popup-video-index{
+        width: 400px;
     }
-    .page-main-index h1{
-        border: 1px solid red;
-        max-width: max-content;
-        height: min-content;
-        font-size: 36px;
-
-        line-height: normal;
+}
+@media (max-width: 390px) {
+    .page-main-index-container h1{
+        font-size: 45px;
     }
-    .button-group {
-        gap: 12px;
-        width: min-content;
+    .page-header-container{
+        width: 385px;
     }
-    .button-order, .button-video{
-        width: 207px;
-
+    .popup-video-index{
+        width: 300px;
+    }
+    body{
+        justify-content: start;
     }
     .page-footer{
-        width: auto;
-        border: 1px solid green;
+        position: fixed;
+        bottom: -10px;
+    }
+}
+@media (max-width: 320px) {
+    .page-main-index-container h1{
+        font-size: 36px;
+    }
+}
+@media (max-height:475px) {   
+    .page-main-index-container h1{
+        margin-bottom: 5px;
+    }
+    .page-main-index-container p{
+        margin-bottom: 20px;
+    }
+}
+@media (max-height: 400px) {
+    .page-main-index-container h1{
+        margin-bottom: 0px;
+        border: 1px solid red;
+        
+    }
+    .page-main-index-container p{
+        margin-bottom: 5px;
+    }
+    .button-order, .button-video{
+        width: 190px;
+        height: 50px;
+        font-size: 18px;
     }
 
-} */
+}
