@@ -217,9 +217,14 @@ header {
 .button-order,
 .button-video {
     color: white;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
 }
 .button-order-header{
-    margin-left: 20px;
+    font-size: 14px;
+    width: 108px;
 }
 .button-order {
     width: 238px;
@@ -1153,6 +1158,9 @@ header {
     }
     .popup-video-index{
         width: 1000px;
+    }
+    .button-order-header{
+        margin-left: 20px;
     }
 }
 @media (max-width: 1000px) or (max-height: 500px){
