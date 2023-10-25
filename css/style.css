@@ -47,7 +47,6 @@ header {
 .page-header-nav {
     max-width: 618px;
     display: flex;
-
 }
 
 .page-header-product, .page-header-questions, .page-header-technology, .page-header-explanation {
@@ -88,6 +87,13 @@ header {
 .logo:hover .logo-svg-path{
     fill: #0DD1A2;
     transition: 0.5s;
+}
+.burger-menu-button:hover .burger-icon-svg-rect{
+    transition: 0.5s;
+    fill:#0DD1A2;
+}
+.burger-menu-button-opacity{
+    opacity: 0;
 }
 
 .nav-images {
@@ -150,19 +156,16 @@ header {
     flex-wrap: nowrap;
     gap: 20px;
 }
-.order-page-header-tel {
+.order-page-header-tel, .order-page-burger-tel {
     font-weight: 700;
     font-size: 16px;
     line-height: normal;
     max-width: min-content;
     text-wrap: nowrap;
 }
-.order-page-header-tel:hover {
+.order-page-header-tel:hover, .order-page-burger-tel:hover {
     color: #0DD1A2;
     transition: 0.5s;
-}
-.header-burger-media {
-    display: none;
 }
 .page-header-container button {
     font-weight: 700;
@@ -188,10 +191,10 @@ header {
 
 .page-main-index-container h1 {
     max-width: 738px;
+    min-height: 100px;
     font-weight: 400;
     font-size: 96px;
     max-height: 111px;
-    line-height: 110px;
     margin-top: 0;
     margin-bottom: 24px;
 }
@@ -348,8 +351,6 @@ header {
 }
 
 .popup-order{
-    position: absolute;
-    margin: 194px 403px;
     z-index: 3;
 }
 
@@ -1145,6 +1146,68 @@ header {
 .footer-contacts-name-privacy {
     margin-left: 325px;
 }
+
+
+.popup-burger{
+    width: 300px;
+    height: 100%;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-top: 43px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    z-index: 3;
+}
+.burger-list-group {
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    height: max-content;
+}
+.burger-list-group-item a{
+    text-decoration: none;
+    color: #FFF;
+}
+.burger-list-group-item a:hover{
+    transition: 0.5s;
+    color: #0DD1A2;
+}
+.burger-footer{
+    padding-left: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.order-page-burger-tel{
+    text-decoration: none;
+    color: #FFF;
+    margin-top: 32px;
+    margin-bottom: 20px;
+}
+.sites-logo-group-burger{
+    margin-top: 0;
+    margin-bottom: 28px;
+}
+.burger-popup-button-close{
+    text-align: end;
+    background: none;
+    border: none;
+    position: relative;
+    margin-bottom: 63px;
+    margin-left: 220px;
+}
+.burger-popup-button-close:hover .burger-close-svg{
+    transition: 0.5s;
+    fill: #0DD1A2;
+}
 @media (max-width: 1347px) {
     .page-header-nav, .order-page-header-tel, .logo-name {
         display: none;
@@ -1153,14 +1216,24 @@ header {
         max-width: 28px;
     }
     .burger-menu-header{
+        display:unset;
+    }
+    button.burger-menu-button{
         display: flex;
         align-items: center;
+        justify-content: end;
+        width: min-content;
     }
     .popup-video-index{
         width: 1000px;
     }
     .button-order-header{
         margin-left: 20px;
+    }
+    .popup-is-work::after{
+        width: 300px;
+        left: auto;
+        right: 0;
     }
 }
 @media (max-width: 1000px) or (max-height: 500px){
@@ -1195,16 +1268,21 @@ header {
     .popup-video-index{
         width: 500px;
     }
-
 }
 @media (max-width: 600px) {
     .page-main-index-container h1{
         font-size: 75px;
     }
+    .popup-form {
+        width: 500px;
+    }
 }
 @media (max-width: 550px) {
     .page-main-index-container h1{
         font-size: 70px;
+    }
+    .popup-form {
+        width: 480px;
     }
 }
 @media (max-width: 500px) {
@@ -1220,8 +1298,18 @@ header {
     .popup-video-index{
         width: 400px;
     }
+    .popup-form {
+        width: 400px;
+    }
+    .popup-input-name, .popup-input-phone{
+        width: 350px;
+    }
+    .popup-p{
+        width: 350px;
+        margin-bottom: 5px;
+    }
 }
-@media (max-width: 390px) {
+@media (max-width: 400px) {
     .page-main-index-container h1{
         font-size: 45px;
     }
@@ -1238,25 +1326,21 @@ header {
         position: fixed;
         bottom: -10px;
     }
-}
-@media (max-width: 320px) {
-    .page-main-index-container h1{
-        font-size: 36px;
+    .popup-form {
+        width: 300px;
+        min-height: 450px;
     }
-}
-@media (max-height:475px) {   
-    .page-main-index-container h1{
-        margin-bottom: 5px;
+    .popup-input-name, .popup-input-phone{
+        width: 250px;
     }
-    .page-main-index-container p{
-        margin-bottom: 20px;
+    .popup-p{
+        width: 250px;
+        margin-bottom: 50px;
     }
 }
 @media (max-height: 400px) {
     .page-main-index-container h1{
         margin-bottom: 0px;
-        border: 1px solid red;
-        
     }
     .page-main-index-container p{
         margin-bottom: 5px;
@@ -1266,5 +1350,42 @@ header {
         height: 50px;
         font-size: 18px;
     }
+    .popup-form{
+        height: 100vh;
+    }
+    
 
+}
+@media (max-height: 350px) {
+    .popup-form{
+        height: 270px;
+    }
+
+}
+@media (max-width: 320px) {
+    .page-main-index-container h1{
+        font-size: 45px;
+    }
+}
+@media (max-height:475px) {   
+    .page-main-index-container h1{
+        margin-bottom: 5px;
+    }
+    .page-main-index-container p{
+        margin-bottom: 20px;
+    }
+
+    .popup-input-name, .popup-input-phone{
+        height: 35px;
+    }
+    .popup-p{
+        height: 20px;
+        margin-bottom: 15px;
+    }
+
+}
+@media(max-height: 540px) {
+    .page-main-index-container h1{
+        min-height: 40px;
+    }
 }

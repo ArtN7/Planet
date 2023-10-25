@@ -51,11 +51,13 @@
           <a href="tel:+88005553575" class="order-page-header-tel">8 (800) 555 35 75</a>
         </div>
         <div class = "burger-menu-header">
-          <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
-            <rect x="10" y="15" width="24" height="2" fill="#E0E0E0"/>
-            <rect x="10" y="21" width="24" height="2" fill="#E0E0E0"/>
-            <rect x="18" y="27" width="16" height="2" fill="#E0E0E0"/>
-          </svg>
+          <button class = "burger-menu-button border-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+              <rect class = "burger-icon-svg-rect" x="10" y="15" width="24" height="2" fill="#E0E0E0"/>
+              <rect class = "burger-icon-svg-rect"  x="10" y="21" width="24" height="2" fill="#E0E0E0"/>
+              <rect class = "burger-icon-svg-rect"  x="18" y="27" width="16" height="2" fill="#E0E0E0"/>
+            </svg>
+          </button>
         </div> 
       </div>
     </header>
@@ -102,7 +104,33 @@
         <span class = "empty"></span>
     </footer>
 
-    <div class = "popup-order popup-display-none">
+    <div class = "popup-burger d-none position-absolute end-0 ">
+      <nav class = "burger-nav-container">
+        <button type="button" class = "burger-popup-button-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+            <rect class = "burger-close-svg" x="2.36816" width="25" height="2" transform="rotate(45 2.36816 0)" fill="#E0E0E0"/>
+            <rect class = "burger-close-svg" x="0.954102" y="18" width="25" height="2" transform="rotate(-45 0.954102 18)" fill="#E0E0E0"/>
+          </svg>
+        </button>
+        <ul class = "burger-list-group">
+          <li class="burger-list-group-item"><a href="index.html">ГЛАВНАЯ</a></li>
+          <li class="burger-list-group-item"><a href="product.html">О ПРОДУКТЕ</a></li>
+          <li class="burger-list-group-item"><a href="explanation.html">КАК РАБОТАЕТ</a></li>
+          <li class="burger-list-group-item"><a href="technology.html">ТЕХНОЛОГИЯ</a></li>
+          <li class="burger-list-group-item"><a href="questions.html">ВОПРОСЫ</a></li>
+          <li class="burger-list-group-item"><a href="contacts.html">КОНТАКТЫ</a></li>
+        </ul>
+      </nav>
+      <footer class = "burger-footer border-top border-light">
+        <a href="tel:+88005553575" class="order-page-burger-tel">8 (800) 555 35 75</a>
+        <div class="sites-logo-group sites-logo-group-burger">
+          <a href = "#"><img src="img/facebook.svg" width="11" height="22" class="facebook" alt="facebook"></a>
+          <a href = "#"><img src="img/vk.svg" width="28" height="15" class="vk" alt="vk"></a>
+        </div>
+      </footer>
+    </div>  
+
+    <div class = "popup-order d-none position-absolute top-50 start-50 translate-middle">
       <form class = "popup-form">
         <button type="button" class = "popup-button-close">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -119,6 +147,7 @@
         <input type="submit" class = "popup-submit" value="Отправить">
       </form>
     </div>
+
     <div class = "popup-confirmation-order popup-confirmation">
       <button type="button" class="popup-button-close">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">

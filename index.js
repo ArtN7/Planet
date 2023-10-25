@@ -5,9 +5,24 @@ const buttonsSubmit = document.querySelectorAll('.popup-submit');
 const body = document.querySelector('body');
 const popupConfirmation = document.querySelector('.popup-confirmation');
 const buttonOK = popupConfirmation.querySelector('.button-ok');
+const buttonBurger = document.querySelector('.burger-menu-button');
+const buttonBurgerClose = document.querySelector('.burger-popup-button-close');
+const popupBurger = document.querySelector('.popup-burger');
+
+buttonBurger.addEventListener('click', () => {
+    popupBurger.classList.remove('d-none');
+    buttonBurger.classList.add('burger-menu-button-opacity');
+    body.classList.add('popup-is-work');
+})
+buttonBurgerClose.addEventListener('click', () => {
+    popupBurger.classList.add('d-none');
+    buttonBurger.classList.remove('burger-menu-button-opacity');
+    body.classList.remove('popup-is-work');
+})
+
 for (const button of buttonOrder) {
     button.addEventListener('click', () => {
-        popup.classList.remove('popup-display-none');
+        popup.classList.remove('d-none');
         body.classList.add('popup-is-work');
 
     })
@@ -16,14 +31,14 @@ for (const button of buttonsSubmit) {
     button.addEventListener('click', (evt) => {
         evt.preventDefault();
         body.classList.add('popup-is-work');
-        popup.classList.add('popup-display-none');
+        popup.classList.add('d-none');
         popupConfirmation.classList.remove('popup-confirmation-order');
     })
 };
 
 for (const button of buttonClose) {
     button.addEventListener('click', () => {
-        popup.classList.add('popup-display-none');
+        popup.classList.add('d-none');
         body.classList.remove('popup-is-work');
         popupConfirmation.classList.add('popup-confirmation-order');
         if (body.querySelector('.div-glass') !== null) {
@@ -67,12 +82,17 @@ body.addEventListener('keydown', (e) => {
             bigImg.classList.add('div-click-glass-none');
             body.classList.remove('popup-is-work');
         } 
-        if (popup.classList.contains('popup-display-none')) {
+        if (popup.classList.contains('d-none')) {
             body.classList.remove('popup-is-work');
             popupConfirmation.classList.add('popup-confirmation-order');
         } else {
-            popup.classList.add('popup-display-none');
+            popup.classList.add('d-none');
             body.classList.remove('popup-is-work');
+        }
+        if (!popupBurger.classList.contains('d-none')){
+            popupBurger.classList.add('d-none');
+            body.classList.remove('popup-is-work');
+            buttonBurger.classList.remove('burger-menu-button-opacity');
         }
 	}
 });
