@@ -1,7 +1,7 @@
 body {
     position: relative;
     height: 100vh;
-    min-width: 380px;
+    min-width: 320px;
     overflow: auto;
     margin: 0 auto;
     padding: 0;
@@ -1215,7 +1215,12 @@ header {
         display: none;
     }
     .logo {
-        max-width: 28px;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+    }
+    .button-order-header{
+        margin-left: 20px;
     }
     .burger-menu-header{
         display:unset;
@@ -1228,9 +1233,6 @@ header {
     }
     .popup-video-index{
         width: 1000px;
-    }
-    .button-order-header{
-        margin-left: 20px;
     }
     .popup-is-work-burger::after{
         width: 300px;
@@ -1263,6 +1265,7 @@ header {
     }
     .button-group{
         justify-content: space-around;
+        gap:10px;
     }
     .button-video{
         width: 238px;
@@ -1283,8 +1286,15 @@ header {
     }
 }
 @media (max-width: 550px) {
+    .page-main-index-container{
+        max-height: 400px;
+    }
+    .page-main-index-container p{
+        margin-bottom: 50px;
+    }
     .page-main-index-container h1{
         font-size: 70px;
+        margin: 0;
     }
     .popup-form {
         width: 480px;
@@ -1296,9 +1306,6 @@ header {
     }
     .page-main-index-container p{
         padding: 0 10px;
-    }
-    .page-main-index-container{
-        padding: 10px 0;
     }
     .popup-video-index{
         width: 400px;
@@ -1354,9 +1361,6 @@ header {
     }
     .page-header-container{
         z-index: 3;
-    }
-    .order-page-burger-tel{
-        width: max-content;
     }
 }
 @media (max-height: 400px) {
