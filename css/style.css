@@ -1355,6 +1355,9 @@ header {
     .page-header-container{
         z-index: 3;
     }
+    .order-page-burger-tel{
+        width: max-content;
+    }
 }
 @media (max-height: 400px) {
     .page-main-index-container h1{
@@ -1376,6 +1379,7 @@ header {
     }
     .order-page-burger-tel{
         margin-top: 10px;
+        border: 1px solid red;
     }
     .sites-logo-group-burger{
         margin-bottom: 0;
