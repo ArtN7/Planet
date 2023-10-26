@@ -11,13 +11,13 @@ const popupBurger = document.querySelector('.popup-burger');
 
 buttonBurger.addEventListener('click', () => {
     popupBurger.classList.remove('d-none');
-    buttonBurger.classList.add('burger-menu-button-opacity');
-    body.classList.add('popup-is-work');
+    buttonBurger.classList.add('opacity-class');
+    body.classList.add('popup-is-work-burger');
 })
 buttonBurgerClose.addEventListener('click', () => {
     popupBurger.classList.add('d-none');
-    buttonBurger.classList.remove('burger-menu-button-opacity');
-    body.classList.remove('popup-is-work');
+    buttonBurger.classList.remove('opacity-class');
+    body.classList.remove('popup-is-work-burger');
 })
 
 for (const button of buttonOrder) {
@@ -91,8 +91,8 @@ body.addEventListener('keydown', (e) => {
         }
         if (!popupBurger.classList.contains('d-none')){
             popupBurger.classList.add('d-none');
-            body.classList.remove('popup-is-work');
-            buttonBurger.classList.remove('burger-menu-button-opacity');
+            body.classList.remove('popup-is-work-burger');
+            buttonBurger.classList.remove('opacity-class');
         }
 	}
 });

@@ -92,7 +92,7 @@ header {
     transition: 0.5s;
     fill:#0DD1A2;
 }
-.burger-menu-button-opacity{
+.opacity-class{
     opacity: 0;
 }
 
@@ -277,7 +277,7 @@ header {
 .empty {
     width: 76px;
 }
-.sites-logo-group {
+.sites-logo-group, .sites-logo-group-burger {
     width: 76px;
     display: flex;
     justify-content: space-between;
@@ -335,9 +335,11 @@ header {
 .popup-display-none {
     display: none;
 }
-.popup-is-work {
+.popup-is-work, .popup-is-work-burger {
     position: relative;
 }
+
+.popup-is-work-burger::after,
 .popup-is-work::after {
     content: "";
     opacity: 0.9;
@@ -1230,7 +1232,7 @@ header {
     .button-order-header{
         margin-left: 20px;
     }
-    .popup-is-work::after{
+    .popup-is-work-burger::after{
         width: 300px;
         left: auto;
         right: 0;
@@ -1267,6 +1269,9 @@ header {
     }
     .popup-video-index{
         width: 500px;
+    }
+    .sites-logo-group{
+        opacity: 0;
     }
 }
 @media (max-width: 600px) {
@@ -1337,6 +1342,19 @@ header {
         width: 250px;
         margin-bottom: 50px;
     }
+    .popup-burger{
+        font-size: 14px;
+        width: 100%;
+    }
+    .popup-is-work-burger::after{
+        width: 100%;
+    }
+    .burger-popup-button-close{
+        margin-left: 330px;
+    }
+    .page-header-container{
+        z-index: 3;
+    }
 }
 @media (max-height: 400px) {
     .page-main-index-container h1{
@@ -1353,7 +1371,16 @@ header {
     .popup-form{
         height: 100vh;
     }
-    
+    .popup-burger, .order-page-burger-tel{
+        font-size: 14px;
+    }
+    .order-page-burger-tel{
+        margin-top: 10px;
+    }
+    .sites-logo-group-burger{
+        margin-bottom: 0;
+        padding-bottom: 5px;
+    }
 
 }
 @media (max-height: 350px) {
@@ -1384,8 +1411,17 @@ header {
     }
 
 }
+@media(max-height: 490px) {
+    .burger-popup-button-close {
+        margin-bottom: 10px;
+    }
+}
 @media(max-height: 540px) {
     .page-main-index-container h1{
         min-height: 40px;
     }
+    .burger-popup-button-close {
+        margin-bottom: 30px;
+    }
 }
+@media (max-height:)
