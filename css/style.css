@@ -160,8 +160,9 @@ header {
     font-weight: 700;
     font-size: 16px;
     line-height: normal;
-    width: min-content;
+    width: 130px;
     text-wrap: nowrap;
+    border: 1px solid red;
 }
 .order-page-header-tel:hover, .order-page-burger-tel:hover {
     color: #0DD1A2;
