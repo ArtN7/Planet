@@ -31,7 +31,7 @@ body {
 header {
     width: 100vw;
     max-width: 1278px;
-    min-width: 380px;
+    min-width: 320px;
     padding-top: 40px;
     display: flex;
     justify-content: center;
@@ -160,9 +160,9 @@ header {
     font-weight: 700;
     font-size: 16px;
     line-height: normal;
-    width: 130px;
+    font-style: normal;
+    width: auto;
     text-wrap: nowrap;
-    border: 1px solid red;
 }
 .order-page-header-tel:hover, .order-page-burger-tel:hover {
     color: #0DD1A2;
@@ -192,7 +192,6 @@ header {
 
 .page-main-index-container h1 {
     max-width: 738px;
-    min-height: 100px;
     font-weight: 400;
     font-size: 96px;
     max-height: 111px;
@@ -1176,12 +1175,14 @@ header {
 .burger-list-group {
     padding: 0;
     margin: 0;
-    margin-left: 20px;
+    padding-left: 20px;
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    gap:20px;
-    height: max-content;
+    justify-content: space-between;
+    gap:35px;
+    min-height: 283px;
+    
 }
 .burger-list-group-item a{
     text-decoration: none;
@@ -1193,7 +1194,8 @@ header {
 }
 .burger-footer{
     padding-left: 20px;
-    height: auto;
+    min-height: 129px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1360,7 +1362,6 @@ header {
         margin-bottom: 50px;
     }
     .popup-burger{
-        font-size: 14px;
         width: 100%;
     }
     .popup-is-work-burger::after{
@@ -1373,6 +1374,7 @@ header {
         z-index: 3;
     }
 }
+
 @media (max-height: 400px) {
     .page-main-index-container h1{
         margin-bottom: 0px;
@@ -1388,12 +1390,8 @@ header {
     .popup-form{
         height: 100vh;
     }
-    .popup-burger, .order-page-burger-tel{
-        font-size: 14px;
-    }
     .order-page-burger-tel{
         margin-top: 10px;
-        border: 1px solid red;
     }
     .sites-logo-group-burger{
         margin-bottom: 0;
@@ -1409,7 +1407,11 @@ header {
 }
 @media (max-width: 320px) {
     .page-main-index-container h1{
-        font-size: 45px;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 0;
     }
 }
 @media (max-height:475px) {   
