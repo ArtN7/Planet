@@ -41,6 +41,7 @@ for (const button of buttonClose) {
         popup.classList.add('d-none');
         body.classList.remove('popup-is-work');
         popupConfirmation.classList.add('popup-confirmation-order');
+        videoPopup.classList.add('d-none');
         if (body.querySelector('.div-glass') !== null) {
             bigImg.classList.add('div-click-glass-none');
             body.classList.remove('popup-is-work');
@@ -56,10 +57,10 @@ let buttonVideo = '';
 let videoPopup = '';
 if (document.querySelector(".button-video") !== null) {
     buttonVideo = document.querySelector('.button-video');
-    videoPopup = document.querySelector('.popup-video-index');
+    videoPopup = document.querySelector('.popup-video-index-container');
     buttonVideo.addEventListener('click', () => {
         body.classList.add('popup-is-work');
-        videoPopup.classList.remove('popup-video-none');
+        videoPopup.classList.remove('d-none');
     })
 }
 let bigImg = '';
@@ -74,11 +75,12 @@ if (body.querySelector('.div-glass') !== null) {
 
 body.addEventListener('keydown', (e) => {
 	if( e.key === "Escape" ){ // код клавиши Escape, но можно использовать e.key
-        if (body.querySelector(".button-video") !== null) {
+        if (document.querySelector('.button-video')!== null) {
             videoPopup.pause();
-            videoPopup.classList.add('popup-video-none');
+            videoPopup.classList.add('d-none');
+            body.classList.remove('popup-is-work');
         }
-        if (body.querySelector('.div-glass') !== null) {
+        if (body.classList.contains('div-glass')) {
             bigImg.classList.add('div-click-glass-none');
             body.classList.remove('popup-is-work');
         } 

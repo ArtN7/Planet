@@ -160,7 +160,7 @@ header {
     font-weight: 700;
     font-size: 16px;
     line-height: normal;
-    max-width: min-content;
+    width: min-content;
     text-wrap: nowrap;
 }
 .order-page-header-tel:hover, .order-page-burger-tel:hover {
@@ -260,10 +260,17 @@ header {
 .popup-video-none {
     display: none;
 }
-.popup-video-index {
+.popup-video-index-container{
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 10%;
     height: max-content;
-    top: 150px; /* настроить под нужное видео */
+    background-color: #f3f3f3;
+    z-index: 3;
+}
+.popup-video-index {
+    position: relative;
     z-index: 3;
 }
 .page-footer {
@@ -511,6 +518,8 @@ header {
     max-width: 1366px;
     max-height: 520px;
 }
+
+
 
 .what-is-planet {
     display: flex;
