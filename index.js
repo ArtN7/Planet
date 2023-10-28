@@ -12,7 +12,8 @@ const mainIndex = document.querySelector('.page-main-index');
 
 buttonBurger.addEventListener('click', () => {
     popupBurger.classList.remove('d-none');
-    buttonBurger.classList.add('opacity-class');
+    buttonBurger.classList.add('d-none');
+    buttonBurgerClose.classList.remove('d-none');
     body.classList.add('popup-is-work-burger');
     if (window.innerWidth < 400) {
         mainIndex.classList.add('opacity-class');
@@ -20,9 +21,10 @@ buttonBurger.addEventListener('click', () => {
 })
 buttonBurgerClose.addEventListener('click', () => {
     popupBurger.classList.add('d-none');
-    buttonBurger.classList.remove('opacity-class');
+    buttonBurger.classList.remove('d-none');
     body.classList.remove('popup-is-work-burger');
     mainIndex.classList.remove('opacity-class');
+    buttonBurgerClose.classList.add('d-none');
 })
 
 for (const button of buttonOrder) {
@@ -99,7 +101,8 @@ body.addEventListener('keydown', (e) => {
         if (!popupBurger.classList.contains('d-none')){
             popupBurger.classList.add('d-none');
             body.classList.remove('popup-is-work-burger');
-            buttonBurger.classList.remove('opacity-class');
+            buttonBurger.classList.remove('d-none');
+            buttonBurgerClose.classList.add('d-none');
         }
 	}
 });
