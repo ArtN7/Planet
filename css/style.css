@@ -448,7 +448,6 @@ header {
 
 .popup-confirmation {
     position: absolute;
-    margin: 215px 403px;
     width: 560px;
     height: 338px;
     display: flex;
@@ -463,9 +462,6 @@ header {
 .circle-done-svg {
     margin-top: 60px;
     margin-bottom: 20px;
-}
-.popup-confirmation-order {
-    display: none;
 }
 .popup-confirmation h4 {
     font-size: 21px;
@@ -482,7 +478,8 @@ header {
     font-weight: 300;
     line-height: 130%;
     opacity: 0.64;
-    width: 400px;
+    width: auto;
+    max-width: 400px;
     margin-top: 0;
     margin-bottom: 30px;
     text-align: center;
@@ -1293,7 +1290,7 @@ header {
     .page-main-index-container h1{
         font-size: 75px;
     }
-    .popup-form {
+    .popup-form, .popup-confirmation {
         width: 500px;
     }
 }
@@ -1308,7 +1305,7 @@ header {
         font-size: 70px;
         margin: 0;
     }
-    .popup-form {
+    .popup-form,  .popup-confirmation {
         width: 480px;
     }
 }
@@ -1322,7 +1319,7 @@ header {
     .popup-video-index{
         width: 400px;
     }
-    .popup-form {
+    .popup-form,  .popup-confirmation {
         width: 400px;
     }
     .popup-input-name, .popup-input-phone{
@@ -1350,7 +1347,7 @@ header {
         position: fixed;
         bottom: -10px;
     }
-    .popup-form {
+    .popup-form,  .popup-confirmation {
         width: 300px;
         min-height: 450px;
     }
@@ -1387,7 +1384,7 @@ header {
         height: 50px;
         font-size: 18px;
     }
-    .popup-form{
+    .popup-form,  .popup-confirmation{
         height: 100vh;
     }
     .order-page-burger-tel{
@@ -1400,7 +1397,7 @@ header {
 
 }
 @media (max-height: 350px) {
-    .popup-form{
+    .popup-form,  .popup-confirmation{
         height: 270px;
     }
 

@@ -8,16 +8,21 @@ const buttonOK = popupConfirmation.querySelector('.button-ok');
 const buttonBurger = document.querySelector('.burger-menu-button');
 const buttonBurgerClose = document.querySelector('.burger-popup-button-close');
 const popupBurger = document.querySelector('.popup-burger');
+const mainIndex = document.querySelector('.page-main-index');
 
 buttonBurger.addEventListener('click', () => {
     popupBurger.classList.remove('d-none');
     buttonBurger.classList.add('opacity-class');
     body.classList.add('popup-is-work-burger');
+    if (window.innerWidth < 400) {
+        mainIndex.classList.add('opacity-class');
+    }
 })
 buttonBurgerClose.addEventListener('click', () => {
     popupBurger.classList.add('d-none');
     buttonBurger.classList.remove('opacity-class');
     body.classList.remove('popup-is-work-burger');
+    mainIndex.classList.remove('opacity-class');
 })
 
 for (const button of buttonOrder) {
@@ -32,7 +37,7 @@ for (const button of buttonsSubmit) {
         evt.preventDefault();
         body.classList.add('popup-is-work');
         popup.classList.add('d-none');
-        popupConfirmation.classList.remove('popup-confirmation-order');
+        popupConfirmation.classList.remove('d-none');
     })
 };
 
@@ -40,7 +45,7 @@ for (const button of buttonClose) {
     button.addEventListener('click', () => {
         popup.classList.add('d-none');
         body.classList.remove('popup-is-work');
-        popupConfirmation.classList.add('popup-confirmation-order');
+        popupConfirmation.classList.add('d-none');
         videoPopup.classList.add('d-none');
         if (body.querySelector('.div-glass') !== null) {
             bigImg.classList.add('div-click-glass-none');
@@ -49,7 +54,7 @@ for (const button of buttonClose) {
     })
 };
 buttonOK.addEventListener('click', () => {
-    popupConfirmation.classList.add('popup-confirmation-order');
+    popupConfirmation.classList.add('d-none');
     body.classList.remove('popup-is-work');
 });
 
@@ -86,7 +91,7 @@ body.addEventListener('keydown', (e) => {
         } 
         if (popup.classList.contains('d-none')) {
             body.classList.remove('popup-is-work');
-            popupConfirmation.classList.add('popup-confirmation-order');
+            popupConfirmation.classList.add('d-none');
         } else {
             popup.classList.add('d-none');
             body.classList.remove('popup-is-work');
