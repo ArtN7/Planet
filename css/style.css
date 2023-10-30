@@ -261,10 +261,8 @@ header {
     display: none;
 }
 .popup-video-index-container{
-    position: absolute;
     display: flex;
     flex-direction: column;
-    top: 10%;
     height: max-content;
     background-color: #f3f3f3;
     z-index: 3;
@@ -510,25 +508,29 @@ header {
     opacity: 1;
     transition: 0.5s;
 }
+
+
+
 .page-main-product {
+    color: #F3F3F3;
     width: 100%;
-    max-width: 1366px;
-    max-height: 520px;
+    max-width: 1238px;
 }
-
-
+.page-main-product-container{
+    max-height: 568px;
+}
 
 .what-is-planet {
     display: flex;
     flex-direction: column;
-    margin-left: 90px;
+    margin-left: 26px;
 }
 
 .main-question-product {
     margin-top: 0;
     margin-bottom: 54px;
-    width: 591px;
-    height: 51px;
+    max-width: 591px;
+    max-height: 51px;
     padding-bottom: 4px;
     border-bottom: 3px solid #0DD1A2;
     display: flex;
@@ -543,8 +545,8 @@ header {
 }
 
 .info-product {
-    width: 440px;
-    height: 281px;
+    max-width: 440px;
+    max-height: 281px;
     margin-top: 0;
     margin-left: 30px;
     font-weight: 300;
@@ -561,19 +563,23 @@ header {
     position: relative;
     width: 737px;
     height: 363px;
-    bottom: 192px;
-    left: 536px;
+    bottom: 185px;
+    left: 471px;
     text-align: end;
 }
 
 .gallery h3 {
     width: 192px;
-    font-size: 24px;
-    line-height: 28px;
-    text-align: right;
     margin: 0;
     padding: 0;
     top: 229px;
+
+    text-align: right;
+    font-family: Ubuntu;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
     position: absolute;
 }
 
@@ -610,7 +616,9 @@ header {
 .end-image-gallary {
     width: 61px;
     font-size: 18px;
-    line-height: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .end-image-gallary {
@@ -660,9 +668,15 @@ header {
     align-self: center;
 }
 
+
+
 .page-main-explanation {
-    width: 1320px;
-    height: 535px;
+    max-width: 1238px;
+    margin: 0;
+}
+.page-main-explanation-container{
+    max-height: 535px;
+    color: #F3F3F3;
 }
 .question-explanation {
     height: 51px;
@@ -674,7 +688,7 @@ header {
     margin-bottom: 6px;
 }
 .border-for-question-explanation {
-    width: 415px;
+    max-width: 415px;
     border-bottom:3px solid #0DD1A2;
     margin-bottom: 46px;
 }
@@ -693,7 +707,7 @@ header {
     justify-content: space-between;
     padding-top: 12px;
     width: 527px;
-    height: min-content;
+    height:168px;
 }
 
 .description-work-item-img {
@@ -727,7 +741,7 @@ header {
     left: -8px;
 
 }
-.about-item h4 {
+.about-work-item h4 {
     max-width: 117px;
     font-size: 21px;
     font-weight: 700;
@@ -735,18 +749,22 @@ header {
     margin-top: 0;
     line-height: normal;
 }
-.item-text-content {
-    width: 300px;
+.work-item-text-content {
     margin-top: 0px;
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
     line-height: 130%;
+    max-height: 98px;
+    width: max-content;
 }
 
 .description-work-item:nth-child(1) {
-    height:155px;
     margin: 0 66px 60px 30px;
+}
+.description-work-item:nth-child(2) {
+    margin-top: 5px;
+
 }
 .description-work-item:nth-of-type(3) {
     margin-left: 60px;
@@ -775,8 +793,9 @@ header {
     z-index: -1;
 }
 
-.about-technology {
+.page-main-technology-container {
     height: 580px;
+    color: #F3F3F3;
 }
 .technology-title {
     font-size: 44px;
@@ -834,6 +853,7 @@ header {
     line-height: 130%;
     margin-top: 0;
     margin-bottom: 0;
+    width: max-content;
 }
 .collection-images-for-helmet {
     width: 480px;
@@ -927,6 +947,9 @@ header {
     margin-bottom: 48px;
     padding-bottom: 48px;
 }
+.page-main-questions-container{
+    color: #F3F3F3;
+}
 .title-for-questions {
     margin-top: 0;
     font-size: 44px;
@@ -960,19 +983,7 @@ header {
     display: flex;
     flex-direction: column;
 }
-.main-question-answer {
-    color: #1C1C1C;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 150%;
-    width: 640px;
-    margin-left: 50px;
-    margin-bottom: 30px;
-}
-.question-hidden {
-    display: none;
-}
+
 .main-question-static-info {
     width: inherit;
     display: flex;
@@ -987,7 +998,23 @@ header {
     margin-left: 20px;
     margin-right: 10px;
 }
-
+.main-question-answer {
+    color: #1C1C1C;
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    width: 640px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    transition: grid-template-rows 200ms;
+}
+.main-question-answer.open{
+    grid-template-rows: 1fr;
+}
 .main-question-button-more-info {
     width: 72px;
     height: 72px;
@@ -1011,6 +1038,10 @@ header {
     transition: 0.5s;
 }
 
+
+.page-main-contacts-container{
+    color: #F3F3F3;
+}
 .page-main-contacts-title {
     font-size: 44px;
     font-style: normal;
@@ -1096,13 +1127,9 @@ header {
 }
 .contacts-block-form {
     margin: 0 0 20px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
 }
 .contacts-block-form-name, .contacts-block-form-email, .contacts-block-form-interest {
     border: none;
-    padding: 15px 0 0 15px;
     color: black;
     font-size: 13px;
     font-style: normal;
@@ -1110,12 +1137,13 @@ header {
     line-height: 130%;
 }
 .contacts-block-form-name, .contacts-block-form-email {
-    width: 265px;
-    height: 31px;
+    width: 280px;
+    height: 46px;
 }
 .contacts-block-form-interest {
     width: 555px;
     height: 129px;
+        padding: 15px 0 0 15px;
 }
 .contacts-form-button-send {
     width: 120px;
@@ -1143,6 +1171,7 @@ header {
     font-weight: 300;
     line-height: 130%;
     opacity: 0.64;
+    color: #F3F3F3;
 }
 .logo-group-contacts {
     margin-left: auto;
@@ -1368,6 +1397,15 @@ header {
     }
 }
 
+@media (max-width: 320px) {
+    .page-main-index-container h1{
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 0;
+    }
+}
 @media (max-height: 400px) {
     .page-main-index-container h1{
         margin-bottom: 0px;
@@ -1397,15 +1435,6 @@ header {
         height: 270px;
     }
 
-}
-@media (max-width: 320px) {
-    .page-main-index-container h1{
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin-bottom: 0;
-    }
 }
 @media (max-height:475px) {   
     .page-main-index-container h1{

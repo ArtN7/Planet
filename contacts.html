@@ -1,145 +1,187 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="UTF-8">
-  <title>VR планетарий</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Сайт образовательного виртуального планетария Digital Planet VR">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
-    rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>VR планетарий</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сайт образовательного виртуального планетария Digital Planet VR">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+      rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
 
-<body>
-  <header class="page-header-contacts">
-    <div class = "page-header-container">
-      <a href="index.html" class="logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-          <g clip-path="url(#clip0_947_156)">
-            <path class = "logo-svg-path" d="M5.47173 14.9688C6.17258 14.9688 6.74074 14.4007 6.74074 13.6998C6.74074 12.999 6.17258 12.4308 5.47173 12.4308C4.77088 12.4308 4.20273 12.999 4.20273 13.6998C4.20273 14.4007 4.77088 14.9688 5.47173 14.9688Z" fill="white"/>
-            <path class = "logo-svg-path" d="M22.1326 14.9688C22.8334 14.9688 23.4016 14.4007 23.4016 13.6998C23.4016 12.999 22.8334 12.4308 22.1326 12.4308C21.4317 12.4308 20.8636 12.999 20.8636 13.6998C20.8636 14.4007 21.4317 14.9688 22.1326 14.9688Z" fill="white"/>
-            <path class = "logo-svg-path" d="M13.9995 1.07491e-05C11.813 -0.0122453 9.65419 0.488796 7.69663 1.46284C5.73907 2.43688 4.03742 3.85673 2.72854 5.6082H3.27435H6.6993C8.1343 5.58449 9.54094 5.20469 10.7929 4.50293C11.189 4.29516 11.6283 4.183 12.0755 4.17545C12.8407 4.17167 13.5767 4.46835 14.1253 5.00168C14.674 5.535 14.9914 6.26237 15.0092 7.0273C15.0072 7.5288 14.8749 8.02116 14.6252 8.45608C14.3755 8.89099 14.017 9.25352 13.5849 9.5081C13.1528 9.76267 12.662 9.90054 12.1605 9.90818C11.6591 9.91581 11.1643 9.79296 10.7246 9.55167C9.19377 8.69001 7.47322 8.22119 5.71684 8.18715H4.35232C3.20952 8.19613 2.07747 8.40868 1.00924 8.81483C-0.318255 12.1442 -0.318255 15.8559 1.00924 19.1852C1.62772 19.3527 2.26519 19.4398 2.90593 19.4445H6.26265C7.69765 19.4207 9.10429 19.041 10.3562 18.3392C10.7523 18.1314 11.1916 18.0193 11.6389 18.0117C12.4041 18.0043 13.1416 18.2975 13.6928 18.8283C14.244 19.359 14.5648 20.085 14.5862 20.8499C14.5923 21.3514 14.4678 21.8458 14.2251 22.2847C13.9824 22.7235 13.6297 23.0917 13.2018 23.3532C12.7738 23.6146 12.2852 23.7603 11.784 23.776C11.2827 23.7917 10.786 23.6767 10.3426 23.4425C8.81171 22.5808 7.09115 22.112 5.33478 22.078H3.97025C3.55461 22.0803 3.13965 22.1122 2.72854 22.1735C4.13111 24.1239 6.01196 25.6805 8.19016 26.6937C10.3684 27.7068 12.7706 28.1425 15.1659 27.9586C17.5612 27.7748 19.8688 26.9777 21.8669 25.6441C23.865 24.3104 25.4863 22.485 26.5749 20.3435C27.6634 18.202 28.1826 15.8164 28.0825 13.4161C27.9824 11.0159 27.2663 8.68183 26.0031 6.63842C24.74 4.595 22.9723 2.911 20.87 1.74839C18.7678 0.585777 16.4017 -0.0163197 13.9995 1.07491e-05ZM22.1866 17.1793C21.6242 17.1788 21.0708 17.0381 20.5765 16.77C18.7773 15.7448 16.7519 15.1822 14.6818 15.1326H13.0716C11.0015 15.1822 8.97603 15.7448 7.17688 16.77C6.65443 17.0513 6.06741 17.1909 5.47426 17.1748C4.88111 17.1588 4.3025 16.9877 3.79601 16.6785C3.28953 16.3694 2.87284 15.933 2.5874 15.4128C2.30196 14.8926 2.15774 14.3067 2.16908 13.7135C2.1976 12.8134 2.57805 11.9605 3.22868 11.3379C3.87931 10.7153 4.74819 10.3729 5.64862 10.384C6.17291 10.3973 6.68687 10.5328 7.14959 10.7797C8.60062 11.6193 10.2363 12.0879 11.9118 12.1443H15.8689C17.5443 12.0879 19.18 11.6193 20.6311 10.7797C21.0938 10.5328 21.6077 10.3973 22.132 10.384C23.0348 10.3729 23.9056 10.7173 24.5567 11.3428C25.2077 11.9683 25.5866 12.8247 25.6116 13.7271C25.6188 14.1779 25.5363 14.6256 25.3688 15.0441C25.2013 15.4626 24.9522 15.8437 24.6359 16.165C24.3197 16.4863 23.9427 16.7414 23.5269 16.9156C23.1111 17.0897 22.6647 17.1794 22.2139 17.1793H22.1866Z" fill="white"/>
-            <path class = "logo-svg-path" d="M11.5848 21.9279C12.1801 21.9279 12.6628 21.4452 12.6628 20.8499C12.6628 20.2546 12.1801 19.7719 11.5848 19.7719C10.9895 19.7719 10.5068 20.2546 10.5068 20.8499C10.5068 21.4452 10.9895 21.9279 11.5848 21.9279Z" fill="white"/>
-            <path class = "logo-svg-path" d="M12.0078 8.07797C12.6031 8.07797 13.0858 7.59535 13.0858 7C13.0858 6.40465 12.6031 5.92203 12.0078 5.92203C11.4125 5.92203 10.9298 6.40465 10.9298 7C10.9298 7.59535 11.4125 8.07797 12.0078 8.07797Z" fill="white"/>
+  <body>
+    <header class="page-header-contacts">
+      <div class = "page-header-container">
+        <a href="index.html" class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <g clip-path="url(#clip0_947_156)">
+              <path class = "logo-svg-path" d="M5.47173 14.9688C6.17258 14.9688 6.74074 14.4007 6.74074 13.6998C6.74074 12.999 6.17258 12.4308 5.47173 12.4308C4.77088 12.4308 4.20273 12.999 4.20273 13.6998C4.20273 14.4007 4.77088 14.9688 5.47173 14.9688Z" fill="white"/>
+              <path class = "logo-svg-path" d="M22.1326 14.9688C22.8334 14.9688 23.4016 14.4007 23.4016 13.6998C23.4016 12.999 22.8334 12.4308 22.1326 12.4308C21.4317 12.4308 20.8636 12.999 20.8636 13.6998C20.8636 14.4007 21.4317 14.9688 22.1326 14.9688Z" fill="white"/>
+              <path class = "logo-svg-path" d="M13.9995 1.07491e-05C11.813 -0.0122453 9.65419 0.488796 7.69663 1.46284C5.73907 2.43688 4.03742 3.85673 2.72854 5.6082H3.27435H6.6993C8.1343 5.58449 9.54094 5.20469 10.7929 4.50293C11.189 4.29516 11.6283 4.183 12.0755 4.17545C12.8407 4.17167 13.5767 4.46835 14.1253 5.00168C14.674 5.535 14.9914 6.26237 15.0092 7.0273C15.0072 7.5288 14.8749 8.02116 14.6252 8.45608C14.3755 8.89099 14.017 9.25352 13.5849 9.5081C13.1528 9.76267 12.662 9.90054 12.1605 9.90818C11.6591 9.91581 11.1643 9.79296 10.7246 9.55167C9.19377 8.69001 7.47322 8.22119 5.71684 8.18715H4.35232C3.20952 8.19613 2.07747 8.40868 1.00924 8.81483C-0.318255 12.1442 -0.318255 15.8559 1.00924 19.1852C1.62772 19.3527 2.26519 19.4398 2.90593 19.4445H6.26265C7.69765 19.4207 9.10429 19.041 10.3562 18.3392C10.7523 18.1314 11.1916 18.0193 11.6389 18.0117C12.4041 18.0043 13.1416 18.2975 13.6928 18.8283C14.244 19.359 14.5648 20.085 14.5862 20.8499C14.5923 21.3514 14.4678 21.8458 14.2251 22.2847C13.9824 22.7235 13.6297 23.0917 13.2018 23.3532C12.7738 23.6146 12.2852 23.7603 11.784 23.776C11.2827 23.7917 10.786 23.6767 10.3426 23.4425C8.81171 22.5808 7.09115 22.112 5.33478 22.078H3.97025C3.55461 22.0803 3.13965 22.1122 2.72854 22.1735C4.13111 24.1239 6.01196 25.6805 8.19016 26.6937C10.3684 27.7068 12.7706 28.1425 15.1659 27.9586C17.5612 27.7748 19.8688 26.9777 21.8669 25.6441C23.865 24.3104 25.4863 22.485 26.5749 20.3435C27.6634 18.202 28.1826 15.8164 28.0825 13.4161C27.9824 11.0159 27.2663 8.68183 26.0031 6.63842C24.74 4.595 22.9723 2.911 20.87 1.74839C18.7678 0.585777 16.4017 -0.0163197 13.9995 1.07491e-05ZM22.1866 17.1793C21.6242 17.1788 21.0708 17.0381 20.5765 16.77C18.7773 15.7448 16.7519 15.1822 14.6818 15.1326H13.0716C11.0015 15.1822 8.97603 15.7448 7.17688 16.77C6.65443 17.0513 6.06741 17.1909 5.47426 17.1748C4.88111 17.1588 4.3025 16.9877 3.79601 16.6785C3.28953 16.3694 2.87284 15.933 2.5874 15.4128C2.30196 14.8926 2.15774 14.3067 2.16908 13.7135C2.1976 12.8134 2.57805 11.9605 3.22868 11.3379C3.87931 10.7153 4.74819 10.3729 5.64862 10.384C6.17291 10.3973 6.68687 10.5328 7.14959 10.7797C8.60062 11.6193 10.2363 12.0879 11.9118 12.1443H15.8689C17.5443 12.0879 19.18 11.6193 20.6311 10.7797C21.0938 10.5328 21.6077 10.3973 22.132 10.384C23.0348 10.3729 23.9056 10.7173 24.5567 11.3428C25.2077 11.9683 25.5866 12.8247 25.6116 13.7271C25.6188 14.1779 25.5363 14.6256 25.3688 15.0441C25.2013 15.4626 24.9522 15.8437 24.6359 16.165C24.3197 16.4863 23.9427 16.7414 23.5269 16.9156C23.1111 17.0897 22.6647 17.1794 22.2139 17.1793H22.1866Z" fill="white"/>
+              <path class = "logo-svg-path" d="M11.5848 21.9279C12.1801 21.9279 12.6628 21.4452 12.6628 20.8499C12.6628 20.2546 12.1801 19.7719 11.5848 19.7719C10.9895 19.7719 10.5068 20.2546 10.5068 20.8499C10.5068 21.4452 10.9895 21.9279 11.5848 21.9279Z" fill="white"/>
+              <path class = "logo-svg-path" d="M12.0078 8.07797C12.6031 8.07797 13.0858 7.59535 13.0858 7C13.0858 6.40465 12.6031 5.92203 12.0078 5.92203C11.4125 5.92203 10.9298 6.40465 10.9298 7C10.9298 7.59535 11.4125 8.07797 12.0078 8.07797Z" fill="white"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_947_156">
+                <rect width="28" height="28" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <span class = "logo-name">Digital Planet</span>
+        </a>
+        <nav class="page-header-nav">
+          <ul class="nav-images">
+            <li class="nav-image"><a href="product.html">О ПРОДУКТЕ</a></li>
+            <li class="nav-image"><a href="explanation.html">КАК РАБОТАЕТ</a></li>
+            <li class="nav-image"><a href="technology.html">ТЕХНОЛОГИЯ</a></li>
+            <li class="nav-image"><a href="questions.html">ВОПРОСЫ</a></li>
+            <li class="nav-image"><a href="contacts.html">КОНТАКТЫ</a></li>
+          </ul>
+        </nav>
+        <div class = "order">
+          <button type="submit" class="button-order button-order-header">ЗАКАЗАТЬ</button>
+          <a href="tel:+88005553575" class="order-page-header-tel">8 (800) 555 35 75</a>
+        </div>
+        <div class = "burger-menu-header">
+          <button type="button" class = "burger-menu-button border-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+              <rect class = "burger-icon-svg-rect" x="10" y="15" width="24" height="2" fill="#E0E0E0"/>
+              <rect class = "burger-icon-svg-rect"  x="10" y="21" width="24" height="2" fill="#E0E0E0"/>
+              <rect class = "burger-icon-svg-rect"  x="18" y="27" width="16" height="2" fill="#E0E0E0"/>
+            </svg>
+          </button>
+          <button type="button" class = "d-none burger-popup-button-close border-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+              <rect class = "burger-close-svg" x="2.36816" width="25" height="2" transform="rotate(45 2.36816 0)" fill="#E0E0E0"/>
+              <rect class = "burger-close-svg" x="0.954102" y="18" width="25" height="2" transform="rotate(-45 0.954102 18)" fill="#E0E0E0"/>
+            </svg>
+          </button>
+        </div> 
+      </div>
+    </header>
+
+    <main class="page-main page-main-contacts">
+      <div class="page-main-contacts-container">
+        <div class  = "page-main-contacts-border-title">
+          <h2 class = "page-main-contacts-title">Контакты</h2>
+        </div>
+        <div class = "contacts-block">
+          <div class = "contacts-info-cities">
+            <div class = "contacts-info-city">
+              <h4 class = "contacts-city-name">Новороссийск</h4>
+              <div class="row">
+                <a href="tel:+79234650141" class="contacts-city-tel">+7 (923) 465 – 01 – 41</a>
+                <a href="mailto:digitalPlanetNR@mail.ru" class="contacts-city-mail">digitalPlanetNR@mail.ru</a>
+              </div>
+            </div>
+            <div class = "contacts-info-city">
+              <h4 class = "contacts-city-name">Москва</h4>
+              <div class="row">
+                <a href="tel:+74958552419" class="contacts-city-tel">+7 (495) 855 – 24 – 19</a>
+                <a href="mailto:digitalPlanetMoscow@mail.ru" class="contacts-city-mail">digitalPlanetMoscow@mail.ru</a>
+              </div>
+            </div>
+            <div class = "contacts-info-city">
+              <h4 class = "contacts-city-name">Саратов</h4>
+              <div class="row">
+                <a href="tel:+79422212178" class="contacts-city-tel">+7 (942) 221 – 21 – 78</a>
+                <a href="mailto:digitalPlanetSaratov@mail.ru" class="contacts-city-mail">digitalPlanetSaratov@mail.ru</a>
+              </div>
+            </div>
+          </div>
+          <div class = "contacts-form">
+            <div class = "contacts-form-text">
+              <h4 class ="contacts-form-text-title">Остались вопросы? Задайте их нам!</h4>
+              <span class  = "contacts-form-text-span">Мы обязательно свяжемся с вами в течение двух рабочих дней</span>
+            </div>
+            <div class = "contacts-block-form">
+              <div class = "row mb-2 g-2">
+                <input type="text" class = "contacts-block-form-name col mx-1 p-3" placeholder="Ваше имя">
+                <input type="email" class = "contacts-block-form-email col mx-1 p-3" placeholder="Ваше e-mail">
+              </div>
+              <div class = "row g-0">
+                <textarea type="text" class = "contacts-block-form-interest col p-3" placeholder="Что вас интересует?"></textarea>
+              </div>
+            </div>
+            <input type="submit" class = "popup-submit contacts-form-button-send" value="Отправить">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer page-footer-contacts">
+      <span class = "footer-contacts-copyright">© Digital Planet, 2019</span>
+      <span class = "footer-contacts-name-privacy">Детский VR планетарий. Все права защищены.</span>
+      <div class="logo-group-contacts">
+        <svg xmlns="http://www.w3.org/2000/svg" width="57" height="24" viewBox="0 0 57 24" fill="none">
+          <g opacity="0.64">
+          <path d="M7.76342 11.7879H9.55366V19.2339C9.55366 19.3809 9.67157 19.5 9.81708 19.5H12.8525C12.998 19.5 13.1159 19.3809 13.1159 19.2339V11.823H15.174C15.3078 11.823 15.4204 11.7215 15.4356 11.5872L15.7482 8.846C15.7568 8.77058 15.7331 8.69506 15.6832 8.63848C15.6332 8.58184 15.5617 8.54943 15.4866 8.54943H13.116V6.83109C13.116 6.31309 13.3921 6.05042 13.9366 6.05042C14.0142 6.05042 15.4866 6.05042 15.4866 6.05042C15.6321 6.05042 15.75 5.93125 15.75 5.7843V3.2681C15.75 3.12109 15.6321 3.00197 15.4866 3.00197H13.3505C13.3355 3.00122 13.302 3 13.2527 3C12.8821 3 11.5938 3.0735 10.5761 4.01933C9.44861 5.06745 9.60535 6.32241 9.6428 6.54V8.54938H7.76342C7.61791 8.54938 7.5 8.6685 7.5 8.81551V11.5217C7.5 11.6687 7.61791 11.7879 7.76342 11.7879Z" fill="white"/>
           </g>
-          <defs>
-            <clipPath id="clip0_947_156">
-              <rect width="28" height="28" fill="white"/>
-            </clipPath>
-          </defs>
-        </svg>
-        <span class = "logo-name">Digital Planet</span>
-      </a>
-      <nav class="page-header-nav">
-        <ul class="nav-images">
-          <li class="nav-image"><a href="product.html">О ПРОДУКТЕ</a></li>
-          <li class="nav-image"><a href="explanation.html">КАК РАБОТАЕТ</a></li>
-          <li class="nav-image"><a href="technology.html">ТЕХНОЛОГИЯ</a></li>
-          <li class="nav-image"><a href="questions.html">ВОПРОСЫ</a></li>
-          <li class="nav-image"><a href="contacts.html">КОНТАКТЫ</a></li>
+          <g opacity="0.64">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M52.5735 14.1533C53.2701 14.7971 54.0053 15.4028 54.6301 16.1116C54.9061 16.4265 55.1674 16.7515 55.3673 17.117C55.6505 17.6366 55.394 18.2084 54.9018 18.2394L51.8425 18.2381C51.0534 18.3001 50.424 17.9994 49.8947 17.4887C49.4711 17.0803 49.0789 16.6456 48.6716 16.2234C48.5046 16.0508 48.3298 15.8884 48.121 15.7601C47.7034 15.5035 47.3409 15.582 47.1022 15.9944C46.8591 16.4138 46.804 16.8782 46.7801 17.3456C46.7474 18.0275 46.5296 18.2068 45.806 18.2381C44.2595 18.3071 42.7918 18.0856 41.4283 17.3471C40.2262 16.696 39.2941 15.7769 38.4827 14.7363C36.903 12.7102 35.6933 10.4838 34.6061 8.19495C34.3613 7.67928 34.5403 7.40248 35.1413 7.39268C36.1394 7.37433 37.1373 7.37563 38.1365 7.39137C38.5421 7.39699 38.8107 7.61723 38.9673 7.98C39.5073 9.23687 40.168 10.4327 40.9973 11.5411C41.2182 11.8362 41.4434 12.1313 41.7641 12.339C42.1189 12.569 42.389 12.4927 42.5559 12.1186C42.6618 11.8814 42.7082 11.6259 42.7321 11.3718C42.8111 10.4977 42.8216 9.62504 42.6829 8.75399C42.5977 8.21037 42.2743 7.85845 41.7013 7.75557C41.4088 7.70313 41.4524 7.60012 41.594 7.44212C41.8399 7.16963 42.0711 7 42.5322 7H45.9897C46.534 7.1017 46.6549 7.33318 46.7294 7.85165L46.7324 11.4873C46.7265 11.688 46.8383 12.2837 47.2202 12.4165C47.5259 12.5111 47.7273 12.2796 47.9107 12.0961C48.7386 11.2644 49.3294 10.2815 49.8572 9.26365C50.0915 8.81611 50.2929 8.35132 50.4881 7.88692C50.6327 7.54232 50.8596 7.37276 51.2697 7.38027L54.5973 7.38308C54.696 7.38308 54.7958 7.38445 54.8914 7.39993C55.4521 7.49039 55.6058 7.71874 55.4326 8.23708C55.1597 9.05033 54.6288 9.72805 54.1096 10.4089C53.5547 11.1358 52.9612 11.8378 52.4109 12.569C51.9053 13.2368 51.9454 13.5733 52.5735 14.1533Z" fill="white"/>
+          </g>
+          </svg>
+      </div>
+    </footer>
+    <div class = "popup-burger d-none position-absolute end-0 ">
+      <nav class = "burger-nav-container">
+        <ul class = "burger-list-group">
+          <li class="burger-list-group-item"><a href="index.html">ГЛАВНАЯ</a></li>
+          <li class="burger-list-group-item"><a href="product.html">О ПРОДУКТЕ</a></li>
+          <li class="burger-list-group-item"><a href="explanation.html">КАК РАБОТАЕТ</a></li>
+          <li class="burger-list-group-item"><a href="technology.html">ТЕХНОЛОГИЯ</a></li>
+          <li class="burger-list-group-item"><a href="questions.html">ВОПРОСЫ</a></li>
+          <li class="burger-list-group-item"><a href="contacts.html">КОНТАКТЫ</a></li>
         </ul>
       </nav>
-      <div class = "order">
-        <button type="submit" class="button-order">ЗАКАЗАТЬ</button>
-        <a href="tel:+88005553575" class="order-page-header-tel">8 (800) 555 35 75</a>
-      </div>
-      <div class = "burger-menu-header">
-        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
-          <rect x="10" y="15" width="24" height="2" fill="#E0E0E0"/>
-          <rect x="10" y="21" width="24" height="2" fill="#E0E0E0"/>
-          <rect x="18" y="27" width="16" height="2" fill="#E0E0E0"/>
-        </svg>
-      </div> 
-    </div>
-  </header>
+      <footer class = "burger-footer border-top border-light">
+        <a href="tel:+88005553575" class="order-page-burger-tel">8 (800) 555 35 75</a>
+        <div class="sites-logo-group-burger">
+          <a href = "#"><img src="img/facebook.svg" width="11" height="22" class="facebook" alt="facebook"></a>
+          <a href = "#"><img src="img/vk.svg" width="28" height="15" class="vk" alt="vk"></a>
+        </div>
+      </footer>
+    </div>  
 
-  <main class="page-main page-main-contacts">
-    <div class  = "page-main-contacts-border-title">
-      <h2 class = "page-main-contacts-title">Контакты</h2>
+    <div class = "popup-order d-none position-absolute top-50 start-50 translate-middle">
+      <form class = "popup-form">
+        <button type="button" class = "popup-button-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path opacity="0.3" d="M1.51629 0.0758672L6.92413 5.48371L12.4078 0L14 1.59216L8.51629 7.07587L13.9241 12.4837L12.509 
+            13.8989L7.10114 8.49102L1.59216 14L0 12.4078L5.50898 6.89886L0.101138 1.49102L1.51629 0.0758672Z" fill="#1C1C1C"/>
+          </svg>
+        </button>
+        <h4 class = "popup-header">Закажите VR планетарий</h2>
+        <p class = "popup-p">Оставьте ваши контактные данные, мы обработаем заявку в течении двух рабочих дней и перезвоним вам.</p>
+        <div class = "popup-inputs">
+          <input type="text" placeholder="Ваше имя" class = "popup-input-name">
+          <input type="tel" placeholder="Ваш телефон" class = "popup-input-phone">
+        </div>
+        <button type="submit" class = "popup-submit" >Отправить</button>
+      </form>
     </div>
-    <div class = "contacts-block">
-      <div class = "contacts-info-cities">
-        <div class = "contacts-info-city">
-          <h4 class = "contacts-city-name">Новороссийск</h4>
-          <a href="tel:+79234650141" class="contacts-city-tel">+7 (923) 465 – 01 – 41</a>
-          <a href="mailto:digitalPlanetNR@mail.ru" class="contacts-city-mail">digitalPlanetNR@mail.ru</a>
-        </div>
-        <div class = "contacts-info-city">
-          <h4 class = "contacts-city-name">Москва</h4>
-          <a href="tel:+74958552419" class="contacts-city-tel">+7 (495) 855 – 24 – 19</a>
-          <a href="mailto:digitalPlanetMoscow@mail.ru" class="contacts-city-mail">digitalPlanetMoscow@mail.ru</a>
-        </div>
-        <div class = "contacts-info-city">
-          <h4 class = "contacts-city-name">Саратов</h4>
-          <a href="tel:+79422212178" class="contacts-city-tel">+7 (942) 221 – 21 – 78</a>
-          <a href="mailto:digitalPlanetSaratov@mail.ru" class="contacts-city-mail">digitalPlanetSaratov@mail.ru</a>
-        </div>
-      </div>
-      <div class = "contacts-form">
-        <div class = "contacts-form-text">
-          <h4 class ="contacts-form-text-title">Остались вопросы? Задайте их нам!</h4>
-          <span class  = "contacts-form-text-span">Мы обязательно свяжемся с вами в течение двух рабочих дней</span>
-        </div>
-        <div class = "contacts-block-form">
-            <textarea type="text" class = "contacts-block-form-name" placeholder="Ваше имя"></textarea>
-            <textarea type="email" class = "contacts-block-form-email" placeholder="Ваше e-mail"></textarea>
-            <textarea type="text" class = "contacts-block-form-interest" placeholder="Что вас интересует?"></textarea>
-        </div>
-        <input type="submit" class = "popup-submit contacts-form-button-send" value="Отправить">
-      </div>
-    </div>
-  </main>
 
-  <footer class="page-footer page-footer-contacts">
-    <span class = "footer-contacts-copyright">© Digital Planet, 2019</span>
-    <span class = "footer-contacts-name-privacy">Детский VR планетарий. Все права защищены.</span>
-    <div class="logo-group-contacts">
-      <svg xmlns="http://www.w3.org/2000/svg" width="57" height="24" viewBox="0 0 57 24" fill="none">
-        <g opacity="0.64">
-        <path d="M7.76342 11.7879H9.55366V19.2339C9.55366 19.3809 9.67157 19.5 9.81708 19.5H12.8525C12.998 19.5 13.1159 19.3809 13.1159 19.2339V11.823H15.174C15.3078 11.823 15.4204 11.7215 15.4356 11.5872L15.7482 8.846C15.7568 8.77058 15.7331 8.69506 15.6832 8.63848C15.6332 8.58184 15.5617 8.54943 15.4866 8.54943H13.116V6.83109C13.116 6.31309 13.3921 6.05042 13.9366 6.05042C14.0142 6.05042 15.4866 6.05042 15.4866 6.05042C15.6321 6.05042 15.75 5.93125 15.75 5.7843V3.2681C15.75 3.12109 15.6321 3.00197 15.4866 3.00197H13.3505C13.3355 3.00122 13.302 3 13.2527 3C12.8821 3 11.5938 3.0735 10.5761 4.01933C9.44861 5.06745 9.60535 6.32241 9.6428 6.54V8.54938H7.76342C7.61791 8.54938 7.5 8.6685 7.5 8.81551V11.5217C7.5 11.6687 7.61791 11.7879 7.76342 11.7879Z" fill="white"/>
-        </g>
-        <g opacity="0.64">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M52.5735 14.1533C53.2701 14.7971 54.0053 15.4028 54.6301 16.1116C54.9061 16.4265 55.1674 16.7515 55.3673 17.117C55.6505 17.6366 55.394 18.2084 54.9018 18.2394L51.8425 18.2381C51.0534 18.3001 50.424 17.9994 49.8947 17.4887C49.4711 17.0803 49.0789 16.6456 48.6716 16.2234C48.5046 16.0508 48.3298 15.8884 48.121 15.7601C47.7034 15.5035 47.3409 15.582 47.1022 15.9944C46.8591 16.4138 46.804 16.8782 46.7801 17.3456C46.7474 18.0275 46.5296 18.2068 45.806 18.2381C44.2595 18.3071 42.7918 18.0856 41.4283 17.3471C40.2262 16.696 39.2941 15.7769 38.4827 14.7363C36.903 12.7102 35.6933 10.4838 34.6061 8.19495C34.3613 7.67928 34.5403 7.40248 35.1413 7.39268C36.1394 7.37433 37.1373 7.37563 38.1365 7.39137C38.5421 7.39699 38.8107 7.61723 38.9673 7.98C39.5073 9.23687 40.168 10.4327 40.9973 11.5411C41.2182 11.8362 41.4434 12.1313 41.7641 12.339C42.1189 12.569 42.389 12.4927 42.5559 12.1186C42.6618 11.8814 42.7082 11.6259 42.7321 11.3718C42.8111 10.4977 42.8216 9.62504 42.6829 8.75399C42.5977 8.21037 42.2743 7.85845 41.7013 7.75557C41.4088 7.70313 41.4524 7.60012 41.594 7.44212C41.8399 7.16963 42.0711 7 42.5322 7H45.9897C46.534 7.1017 46.6549 7.33318 46.7294 7.85165L46.7324 11.4873C46.7265 11.688 46.8383 12.2837 47.2202 12.4165C47.5259 12.5111 47.7273 12.2796 47.9107 12.0961C48.7386 11.2644 49.3294 10.2815 49.8572 9.26365C50.0915 8.81611 50.2929 8.35132 50.4881 7.88692C50.6327 7.54232 50.8596 7.37276 51.2697 7.38027L54.5973 7.38308C54.696 7.38308 54.7958 7.38445 54.8914 7.39993C55.4521 7.49039 55.6058 7.71874 55.4326 8.23708C55.1597 9.05033 54.6288 9.72805 54.1096 10.4089C53.5547 11.1358 52.9612 11.8378 52.4109 12.569C51.9053 13.2368 51.9454 13.5733 52.5735 14.1533Z" fill="white"/>
-        </g>
-        </svg>
-    </div>
-  </footer>
-  <div class = "popup-order popup-display-none">
-    <form class = "popup-form">
-      <button type="button" class = "popup-button-close">
+    <div class = "d-none popup-confirmation position-absolute top-50 start-50 translate-middle">
+      <button type="button" class="popup-button-close">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path opacity="0.3" d="M1.51629 0.0758672L6.92413 5.48371L12.4078 0L14 1.59216L8.51629 7.07587L13.9241 12.4837L12.509 
-          13.8989L7.10114 8.49102L1.59216 14L0 12.4078L5.50898 6.89886L0.101138 1.49102L1.51629 0.0758672Z" fill="#1C1C1C"/>
+          <path opacity="0.3" d="M1.51629 0.0758672L6.92413 5.48371L12.4078 0L14 1.59216L8.51629 7.07587L13.9241 12.4837L12.509 13.8989L7.10114 8.49102L1.59216 14L0 12.4078L5.50898 6.89886L0.101138 1.49102L1.51629 0.0758672Z" fill="#1C1C1C"/>
         </svg>
       </button>
-      <h4 class = "popup-header">Закажите VR планетарий</h2>
-      <p class = "popup-p">Оставьте ваши контактные данные, мы обработаем заявку в течении двух рабочих дней и перезвоним вам.</p>
-      <div class = "popup-inputs">
-        <input type="text" placeholder="Ваше имя" class = "popup-input-name">
-        <input type="tel" placeholder="Ваш телефон" class = "popup-input-phone">
-      </div>
-      <input type="submit" class = "popup-submit" value="Отправить">
-    </form>
-  </div>
-  <div class = "popup-confirmation-order popup-confirmation">
-    <button type="button" class="popup-button-close">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-        <path opacity="0.3" d="M1.51629 0.0758672L6.92413 5.48371L12.4078 0L14 1.59216L8.51629 7.07587L13.9241 12.4837L12.509 13.8989L7.10114 8.49102L1.59216 14L0 12.4078L5.50898 6.89886L0.101138 1.49102L1.51629 0.0758672Z" fill="#1C1C1C"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="60" viewBox="0 0 64 60" fill="none" class = "circle-done-svg">
+        <circle opacity="0.1" cx="30" cy="30" r="28" stroke="#1C1C1C" stroke-width="4"/>
+        <path d="M15 27.0769L29.6546 44L60 9" stroke="#1DC04B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-    </button>
-    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="60" viewBox="0 0 64 60" fill="none" class = "circle-done-svg">
-      <circle opacity="0.1" cx="30" cy="30" r="28" stroke="#1C1C1C" stroke-width="4"/>
-      <path d="M15 27.0769L29.6546 44L60 9" stroke="#1DC04B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <h4>Сообщение успешно отправлено!</h4>
-    <span>Мы обязательно свяжемся с вами в ближайшее время и подробно ответим на ваш вопрос, будьте на связи!</span>
-    <button type="button" class="button-ok">OK</button>
-  </div>
-    <script src="index.js"></script>
-</body>
+      <h4>Сообщение успешно отправлено!</h4>
+      <span>Мы обязательно свяжемся с вами в ближайшее время и подробно ответим на ваш вопрос, будьте на связи!</span>
+      <button type="button" class="button-ok">OK</button>
+    </div>
+      <script src="index.js"></script>
+  </body>
 </html>
