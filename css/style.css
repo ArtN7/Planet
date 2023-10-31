@@ -972,7 +972,7 @@ header {
 }
 .main-question {
     width: 904px;
-    min-height: 72px;
+    
     opacity: 0.95;
     background: #FFF;
     color: #1C1C1C;
@@ -1000,6 +1000,7 @@ header {
 }
 .main-question-answer {
     color: #1C1C1C;
+    position: relative;
     display: grid;
     grid-template-rows: 0fr;
     overflow: hidden;
@@ -1009,11 +1010,11 @@ header {
     line-height: 150%;
     width: 640px;
     margin-left: 50px;
-    margin-bottom: 30px;
     transition: grid-template-rows 200ms;
 }
 .main-question-answer.open{
     grid-template-rows: 1fr;
+    margin-bottom: 25px;
 }
 .main-question-button-more-info {
     width: 72px;
@@ -1030,10 +1031,10 @@ header {
     line-height: 132.135%;
 
 }
-.main-question-button-plus-closed {
+.main-question-button-plus {
     transition: 0.5s;
 }
-.main-question-button-plus-open {
+.main-question-button-plus.open {
     transform: rotate(45deg) translate(1px, -3px);
     transition: 0.5s;
 }

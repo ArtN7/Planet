@@ -151,16 +151,15 @@ if (body.querySelector(".gallary-main-img") !== null) {
 const buttonsMoreInfo = document.querySelectorAll('.main-question-button-more-info');
 const answer = document.querySelectorAll('.main-question-answer');
 for (let i = 0; i < buttonsMoreInfo.length; i += 1) {
-    const buttonPlus = buttonsMoreInfo[i].querySelector('.main-question-button-plus-closed');
+    const buttonPlus = buttonsMoreInfo[i].querySelector('.main-question-button-plus');
     buttonsMoreInfo[i].addEventListener('click', () => {
-        if (answer[i].classList.contains('open')){
-            answer[i].classList.remove('open');
-            buttonPlus.classList.add('main-question-button-plus-open');
-            buttonPlus.classList.remove('main-question-button-plus-closed');
-        } else {
+        if (!answer[i].classList.contains('open')){
             answer[i].classList.add('open');
-            buttonPlus.classList.remove('main-question-button-plus-open');
-            buttonPlus.classList.add('main-question-button-plus-closed');
+            buttonPlus.classList.add('open');
+            console.log('open')
+        } else {
+            answer[i].classList.remove('open');
+            buttonPlus.classList.remove('open');
         }
 
     })
