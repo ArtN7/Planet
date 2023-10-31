@@ -1407,6 +1407,11 @@ header {
         margin-bottom: 0;
     }
 }
+@media (max-height: 600px){
+    .popup-is-work .page-header-container{
+        z-index: 2;
+    }
+}
 @media (max-height: 400px) {
     .page-main-index-container h1{
         margin-bottom: 0px;

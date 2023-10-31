@@ -31,6 +31,7 @@ for (const button of buttonOrder) {
     button.addEventListener('click', () => {
         popup.classList.remove('d-none');
         body.classList.add('popup-is-work');
+        popupBurger.classList.add('opacity-25');
 
     })
 };
@@ -40,6 +41,7 @@ for (const button of buttonsSubmit) {
         body.classList.add('popup-is-work');
         popup.classList.add('d-none');
         popupConfirmation.classList.remove('d-none');
+        popupBurger.classList.add('opacity-25');
     })
 };
 
@@ -53,11 +55,13 @@ for (const button of buttonClose) {
             bigImg.classList.add('div-click-glass-none');
             body.classList.remove('popup-is-work');
         } 
+        popupBurger.classList.remove('opacity-25');
     })
 };
 buttonOK.addEventListener('click', () => {
     popupConfirmation.classList.add('d-none');
     body.classList.remove('popup-is-work');
+    popupBurger.classList.remove('opacity-25');
 });
 
 let buttonVideo = '';
