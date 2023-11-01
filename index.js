@@ -8,31 +8,38 @@ const buttonOK = popupConfirmation.querySelector('.button-ok');
 const buttonBurger = document.querySelector('.burger-menu-button');
 const buttonBurgerClose = document.querySelector('.burger-popup-button-close');
 const popupBurger = document.querySelector('.popup-burger');
-const mainIndex = document.querySelector('.page-main-index');
+const main = document.querySelector('.page-main');
 
 buttonBurger.addEventListener('click', () => {
     popupBurger.classList.remove('d-none');
     buttonBurger.classList.add('d-none');
     buttonBurgerClose.classList.remove('d-none');
     body.classList.add('popup-is-work-burger');
-    if (window.innerWidth < 400) {
-        mainIndex.classList.add('opacity-class');
+    if (window.innerWidth <= 400){
+        main.classList.add('opacity-0');
     }
 })
 buttonBurgerClose.addEventListener('click', () => {
     popupBurger.classList.add('d-none');
     buttonBurger.classList.remove('d-none');
     body.classList.remove('popup-is-work-burger');
-    mainIndex.classList.remove('opacity-class');
     buttonBurgerClose.classList.add('d-none');
+    main.classList.remove('opacity-0');
+
 })
 
 for (const button of buttonOrder) {
     button.addEventListener('click', () => {
         popup.classList.remove('d-none');
         body.classList.add('popup-is-work');
-        popupBurger.classList.add('opacity-25');
-
+        if (window.innerWidth > 400){
+            popupBurger.classList.add('opacity-25');
+        }
+        popupBurger.classList.add('d-none');
+        buttonBurger.classList.remove('d-none');
+        buttonBurgerClose.classList.add('d-none');
+        body.classList.remove('popup-is-work-burger');
+        main.classList.remove('opacity-0');
     })
 };
 for (const button of buttonsSubmit) {
@@ -41,7 +48,11 @@ for (const button of buttonsSubmit) {
         body.classList.add('popup-is-work');
         popup.classList.add('d-none');
         popupConfirmation.classList.remove('d-none');
-        popupBurger.classList.add('opacity-25');
+        popupBurger.classList.add('d-none');
+        buttonBurger.classList.remove('d-none');
+        buttonBurgerClose.classList.add('d-none');
+        body.classList.remove('popup-is-work-burger');
+        main.classList.remove('opacity-0');
     })
 };
 
