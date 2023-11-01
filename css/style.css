@@ -470,7 +470,7 @@ header {
     margin-top: 0;
     margin-bottom: 10px;
 }
-.popup-confirmation span {
+.popup-confirmation p {
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
@@ -1405,6 +1405,12 @@ header {
         font-weight: 400;
         line-height: normal;
         margin-bottom: 0;
+    }
+    .popup-p {
+        width: 300px;
+    }
+    .popup-confirmation p{
+        width:300px;
     }
 }
 @media (max-height: 600px){
