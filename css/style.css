@@ -638,24 +638,9 @@ header {
     align-items: center;
 }
 
-.slide-to-right {
-    background: url(../img/slide-to-right.svg) no-repeat 50% 50%;
-    background-color: #1C1C1C;
-}
-
-.slide-to-left {
-    background: url(../img/slide-to-left.svg) no-repeat 50% 50%;
-    background-color: #1C1C1C;
-}
-
-.slide-to-right:hover {
-    background-image: url(../img/slide-to-right-green.svg);
-    transition: 0.5s;
-}
-
-.slide-to-left:hover {
-    background-image: url(../img/slide-to-right-green.svg);
-    transform: rotate(180deg);
+.slide-to-right:hover .slide-to-path,
+.slide-to-left:hover .slide-to-path{
+    stroke:#0DD1A2;
     transition: 0.5s;
 }
 
@@ -794,7 +779,7 @@ header {
 }
 
 .page-main-technology-container {
-    height: 580px;
+    height: 570px;
     color: #F3F3F3;
 }
 .technology-title {
@@ -889,13 +874,10 @@ header {
     bottom: 52px;
     right: 48px;
 }
-.div-click-glass-none {
-    display: none;
+.div-glass:hover .div-glass-circle{
+    fill: #0DD1A2;
 }
 .div-click-glass {
-    position: absolute;
-    top: 170px;
-    left: 300px;
     z-index: 3;
 }
 .pointer-1, .pointer-2, .pointer-3, .pointer-4 {
@@ -1124,10 +1106,19 @@ input:focus, textarea:focus{
     outline: none;
 }
 .icon-correct-value-name, .icon-incorrect-value-name,
-.icon-correct-value-phone, .icon-incorrect-value-phone{
+.icon-correct-value-phone, .icon-incorrect-value-phone,
+.icon-correct-value-email, .icon-incorrect-value-email{
     position: absolute;
     right:15%;
 }
+.contacts-form-name-container .icon-correct-value-name, 
+.contacts-form-name-container .icon-incorrect-value-name{
+    right: 48%;
+}
+.icon-correct-value-email, .icon-incorrect-value-email{
+    right: 28%;
+}
+
 .contacts-form-text {
     margin-bottom: 12px;
 }
@@ -1157,13 +1148,13 @@ input:focus, textarea:focus{
     line-height: 130%;
 }
 .contacts-block-form-name, .contacts-block-form-email {
+    margin: 0;
     width: 280px;
     height: 46px;
 }
 .contacts-block-form-interest {
-    width: 555px;
+    width: 570px;
     height: 129px;
-        padding: 15px 0 0 15px;
 }
 .contacts-form-button-send {
     width: 120px;

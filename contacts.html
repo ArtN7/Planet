@@ -42,7 +42,7 @@
             <li class="nav-image"><a href="explanation.html">КАК РАБОТАЕТ</a></li>
             <li class="nav-image"><a href="technology.html">ТЕХНОЛОГИЯ</a></li>
             <li class="nav-image"><a href="questions.html">ВОПРОСЫ</a></li>
-            <li class="nav-image"><a href="contacts.html">КОНТАКТЫ</a></li>
+            <li class="nav-image active"><a href="contacts.html">КОНТАКТЫ</a></li>
           </ul>
         </nav>
         <div class = "order">
@@ -96,22 +96,40 @@
               </div>
             </div>
           </div>
-          <div class = "contacts-form">
+          <form class = "contacts-form">
             <div class = "contacts-form-text">
               <h4 class ="contacts-form-text-title">Остались вопросы? Задайте их нам!</h4>
               <span class  = "contacts-form-text-span">Мы обязательно свяжемся с вами в течение двух рабочих дней</span>
             </div>
             <div class = "contacts-block-form">
-              <div class = "row mb-2 g-2">
-                <input type="text" class = "contacts-block-form-name col mx-1 p-3" placeholder="Ваше имя">
-                <input type="email" class = "contacts-block-form-email col mx-1 p-3" placeholder="Ваше e-mail">
+              <div class = "d-flex  mb-2 justify-content-between">
+                <div class="contacts-form-name-container">
+                  <input type="text" class = "contacts-block-form-name p-3 field" placeholder="Ваше имя">
+                  <svg xmlns="http://www.w3.org/2000/svg" class = "icon-correct-value-name d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                    <path d="M17 23.6484L20.9079 28L29 19" stroke="#1DC04B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class = "icon-incorrect-value-name d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5431 20.6676C29.1514 20.0605 29.1524 19.0752 28.5453 18.4668C27.9382 17.8585 26.9529 17.8575 26.3446 18.4646L23.0029 21.7995L19.6672 18.4569C19.0601 17.8486 18.0747 17.8476 17.4664 18.4547C16.8581 19.0618 16.857 20.0471 17.4641 20.6554L20.7999 23.998L17.4569 27.3341C16.8486 27.9412 16.8476 28.9265 17.4547 29.5348C18.0618 30.1432 19.0471 30.1442 19.6554 29.5371L22.9984 26.201L26.3336 29.5431C26.9407 30.1514 27.926 30.1524 28.5344 29.5453C29.1427 28.9382 29.1437 27.9529 28.5366 27.3446L25.2014 24.0025L28.5431 20.6676Z" fill="#F97676"/>
+                  </svg>
+                  <div id="contacts-name_error" class="error d-none text-center" style="color: #F97676;">Please enter a valid name</div>
+                </div>
+                <div class="contacts-form-email-container">
+                  <input type="email" class = "contacts-block-form-email p-3 field" placeholder="Ваше e-mail">
+                  <svg xmlns="http://www.w3.org/2000/svg" class = "icon-correct-value-email d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                    <path d="M17 23.6484L20.9079 28L29 19" stroke="#1DC04B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" class = "icon-incorrect-value-email d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5431 20.6676C29.1514 20.0605 29.1524 19.0752 28.5453 18.4668C27.9382 17.8585 26.9529 17.8575 26.3446 18.4646L23.0029 21.7995L19.6672 18.4569C19.0601 17.8486 18.0747 17.8476 17.4664 18.4547C16.8581 19.0618 16.857 20.0471 17.4641 20.6554L20.7999 23.998L17.4569 27.3341C16.8486 27.9412 16.8476 28.9265 17.4547 29.5348C18.0618 30.1432 19.0471 30.1442 19.6554 29.5371L22.9984 26.201L26.3336 29.5431C26.9407 30.1514 27.926 30.1524 28.5344 29.5453C29.1427 28.9382 29.1437 27.9529 28.5366 27.3446L25.2014 24.0025L28.5431 20.6676Z" fill="#F97676"/>
+                  </svg>
+                  <div id="contacts-email_error" class="error d-none text-center" style="color: #F97676;">Please enter a valid email</div>
+                </div>
               </div>
-              <div class = "row g-0">
-                <textarea type="text" class = "contacts-block-form-interest col p-3" placeholder="Что вас интересует?"></textarea>
+              <div class = "">
+                <textarea type="text" class = "contacts-block-form-interest p-3" placeholder="Что вас интересует?"></textarea>
               </div>
             </div>
-            <input type="submit" class = "popup-submit contacts-form-button-send" value="Отправить">
-          </div>
+            <button type="submit" class = "popup-submit contacts-form-button-send">Отправить</button>
+          </form>
         </div>
       </div>
     </main>
@@ -161,10 +179,28 @@
         <h4 class = "popup-header">Закажите VR планетарий</h2>
         <p class = "popup-p">Оставьте ваши контактные данные, мы обработаем заявку в течении двух рабочих дней и перезвоним вам.</p>
         <div class = "popup-inputs">
-          <input type="text" placeholder="Ваше имя" class = "popup-input-name">
-          <input type="tel" placeholder="Ваш телефон" class = "popup-input-phone">
+          <div class = "input-name-container">
+            <input type="text" placeholder="Ваше имя" class = "popup-input-name field">
+            <svg xmlns="http://www.w3.org/2000/svg" class = "icon-correct-value-name d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <path d="M17 23.6484L20.9079 28L29 19" stroke="#1DC04B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class = "icon-incorrect-value-name d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5431 20.6676C29.1514 20.0605 29.1524 19.0752 28.5453 18.4668C27.9382 17.8585 26.9529 17.8575 26.3446 18.4646L23.0029 21.7995L19.6672 18.4569C19.0601 17.8486 18.0747 17.8476 17.4664 18.4547C16.8581 19.0618 16.857 20.0471 17.4641 20.6554L20.7999 23.998L17.4569 27.3341C16.8486 27.9412 16.8476 28.9265 17.4547 29.5348C18.0618 30.1432 19.0471 30.1442 19.6554 29.5371L22.9984 26.201L26.3336 29.5431C26.9407 30.1514 27.926 30.1524 28.5344 29.5453C29.1427 28.9382 29.1437 27.9529 28.5366 27.3446L25.2014 24.0025L28.5431 20.6676Z" fill="#F97676"/>
+            </svg>
+            <div id="name_error" class="error d-none text-center" style="color: #F97676;">Please enter a valid name</div>
+          </div>
+          <div class="input-phone-container">
+            <input type="tel" placeholder="Ваш телефон" class = "popup-input-phone field">
+            <svg xmlns="http://www.w3.org/2000/svg" class = "icon-correct-value-phone d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <path d="M17 23.6484L20.9079 28L29 19" stroke="#1DC04B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class = "icon-incorrect-value-phone d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5431 20.6676C29.1514 20.0605 29.1524 19.0752 28.5453 18.4668C27.9382 17.8585 26.9529 17.8575 26.3446 18.4646L23.0029 21.7995L19.6672 18.4569C19.0601 17.8486 18.0747 17.8476 17.4664 18.4547C16.8581 19.0618 16.857 20.0471 17.4641 20.6554L20.7999 23.998L17.4569 27.3341C16.8486 27.9412 16.8476 28.9265 17.4547 29.5348C18.0618 30.1432 19.0471 30.1442 19.6554 29.5371L22.9984 26.201L26.3336 29.5431C26.9407 30.1514 27.926 30.1524 28.5344 29.5453C29.1427 28.9382 29.1437 27.9529 28.5366 27.3446L25.2014 24.0025L28.5431 20.6676Z" fill="#F97676"/>
+            </svg>
+            <div id="phone_error" class="error d-none text-center" style="color: #F97676;">Please enter a valid phone(10-12 numbers)</div>
+          </div>
         </div>
-        <button type="submit" class = "popup-submit" >Отправить</button>
+        <button type="submit" class = "popup-submit popup-button" >Отправить</button>
       </form>
     </div>
 
@@ -183,5 +219,6 @@
       <button type="button" class="button-ok">OK</button>
     </div>
       <script src="./src/index.js"></script>
+      <script src="./src/validation.js"></script>
   </body>
 </html>

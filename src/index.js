@@ -25,6 +25,7 @@ buttonBurgerClose.addEventListener('click', () => {
     body.classList.remove('popup-is-work-burger');
     buttonBurgerClose.classList.add('d-none');
     main.classList.remove('opacity-0');
+    bigImg.classList.add('d-none');
 
 })
 
@@ -48,9 +49,11 @@ for (const button of buttonClose) {
         popup.classList.add('d-none');
         body.classList.remove('popup-is-work');
         popupConfirmation.classList.add('d-none');
-        videoPopup.classList.add('d-none');
+        if (document.querySelector(".button-video") !== null){
+            videoPopup.classList.add('d-none');
+        }
         if (body.querySelector('.div-glass') !== null) {
-            bigImg.classList.add('div-click-glass-none');
+            bigImg.classList.add('d-none');
             body.classList.remove('popup-is-work');
         } 
         popupBurger.classList.remove('opacity-25');
@@ -77,7 +80,7 @@ if (body.querySelector('.div-glass') !== null) {
     const glass = body.querySelector('.div-glass');
     bigImg = body.querySelector('.div-click-glass');
     glass.addEventListener('click', () => {
-        bigImg.classList.remove('div-click-glass-none');
+        bigImg.classList.remove('d-none');
         body.classList.add('popup-is-work');
     })
 }
@@ -89,8 +92,9 @@ body.addEventListener('keydown', (e) => {
             videoPopup.classList.add('d-none');
             body.classList.remove('popup-is-work');
         }
-        if (body.classList.contains('div-glass')) {
-            bigImg.classList.add('div-click-glass-none');
+        if (body.querySelector('.div-glass') !== null) {
+            console.log(bigImg);
+            bigImg.classList.add('d-none');
             body.classList.remove('popup-is-work');
         } 
         if (popup.classList.contains('d-none')) {

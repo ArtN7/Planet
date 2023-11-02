@@ -40,7 +40,7 @@
           <ul class="nav-images">
             <li class="nav-image"><a href="product.html">О ПРОДУКТЕ</a></li>
             <li class="nav-image"><a href="explanation.html">КАК РАБОТАЕТ</a></li>
-            <li class="nav-image"><a href="technology.html">ТЕХНОЛОГИЯ</a></li>
+            <li class="nav-image active"><a href="technology.html">ТЕХНОЛОГИЯ</a></li>
             <li class="nav-image"><a href="questions.html">ВОПРОСЫ</a></li>
             <li class="nav-image"><a href="contacts.html">КОНТАКТЫ</a></li>
           </ul>
@@ -113,7 +113,7 @@
             <img src = "img/VR-helmet.png" width="417" height="214" alt ="VR-helmet" class = "VR-helmet">
             <div class  ="div-glass">
               <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85" fill="none">
-                <circle cx="42.5" cy="42.5" r="42.5" fill="#15B38D"/>
+                <circle class = "div-glass-circle" cx="42.5" cy="42.5" r="42.5" fill="#15B38D"/>
                 <path d="M66.5815 62.6282L54.7637 50.8104C59.9257 44.6717 59.6467 35.3939 53.8568 29.604C47.7181 23.4653 37.7427 23.4653 31.604 
                 29.604C25.4653 35.7427 25.4653 45.7181 31.604 51.8568C34.6734 54.8564 38.7193 56.3911 42.6955 56.3911C46.2532 56.3911 49.8806 
                 55.1354 52.7407 52.7637L64.5585 64.5815C64.9073 64.8605 65.2561 65 65.6048 65C65.9536 65 66.3024 64.8605 66.5815 64.5815C67.1395 
@@ -127,7 +127,7 @@
             </div>
           </div>
         </div>
-        <div class = "div-click-glass div-click-glass-none">
+        <div class = "div-click-glass d-none position-absolute top-50 start-50 translate-middle">
           <button type="button" class = "popup-button-close">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path opacity="0.3" d="M1.51629 0.0758672L6.92413 5.48371L12.4078 0L14 1.59216L8.51629 7.07587L13.9241 12.4837L12.509 
@@ -201,10 +201,28 @@
         <h4 class = "popup-header">Закажите VR планетарий</h2>
         <p class = "popup-p">Оставьте ваши контактные данные, мы обработаем заявку в течении двух рабочих дней и перезвоним вам.</p>
         <div class = "popup-inputs">
-          <input type="text" placeholder="Ваше имя" class = "popup-input-name">
-          <input type="tel" placeholder="Ваш телефон" class = "popup-input-phone">
+          <div class = "input-name-container">
+            <input type="text" placeholder="Ваше имя" class = "popup-input-name field">
+            <svg xmlns="http://www.w3.org/2000/svg" class = "icon-correct-value-name d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <path d="M17 23.6484L20.9079 28L29 19" stroke="#1DC04B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class = "icon-incorrect-value-name d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5431 20.6676C29.1514 20.0605 29.1524 19.0752 28.5453 18.4668C27.9382 17.8585 26.9529 17.8575 26.3446 18.4646L23.0029 21.7995L19.6672 18.4569C19.0601 17.8486 18.0747 17.8476 17.4664 18.4547C16.8581 19.0618 16.857 20.0471 17.4641 20.6554L20.7999 23.998L17.4569 27.3341C16.8486 27.9412 16.8476 28.9265 17.4547 29.5348C18.0618 30.1432 19.0471 30.1442 19.6554 29.5371L22.9984 26.201L26.3336 29.5431C26.9407 30.1514 27.926 30.1524 28.5344 29.5453C29.1427 28.9382 29.1437 27.9529 28.5366 27.3446L25.2014 24.0025L28.5431 20.6676Z" fill="#F97676"/>
+            </svg>
+            <div id="name_error" class="error d-none text-center" style="color: #F97676;">Please enter a valid name</div>
+          </div>
+          <div class="input-phone-container">
+            <input type="tel" placeholder="Ваш телефон" class = "popup-input-phone field">
+            <svg xmlns="http://www.w3.org/2000/svg" class = "icon-correct-value-phone d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <path d="M17 23.6484L20.9079 28L29 19" stroke="#1DC04B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class = "icon-incorrect-value-phone d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M28.5431 20.6676C29.1514 20.0605 29.1524 19.0752 28.5453 18.4668C27.9382 17.8585 26.9529 17.8575 26.3446 18.4646L23.0029 21.7995L19.6672 18.4569C19.0601 17.8486 18.0747 17.8476 17.4664 18.4547C16.8581 19.0618 16.857 20.0471 17.4641 20.6554L20.7999 23.998L17.4569 27.3341C16.8486 27.9412 16.8476 28.9265 17.4547 29.5348C18.0618 30.1432 19.0471 30.1442 19.6554 29.5371L22.9984 26.201L26.3336 29.5431C26.9407 30.1514 27.926 30.1524 28.5344 29.5453C29.1427 28.9382 29.1437 27.9529 28.5366 27.3446L25.2014 24.0025L28.5431 20.6676Z" fill="#F97676"/>
+            </svg>
+            <div id="phone_error" class="error d-none text-center" style="color: #F97676;">Please enter a valid phone(10-12 numbers)</div>
+          </div>
         </div>
-        <button type="submit" class = "popup-submit" >Отправить</button>
+        <button type="submit" class = "popup-submit popup-button" >Отправить</button>
       </form>
     </div>
 
@@ -224,5 +242,6 @@
       <button type="button" class="button-ok">OK</button>
     </div>
     <script src="./src/index.js"></script>
+    <script src="./src/validation.js"></script>
   </body>
 </html>
