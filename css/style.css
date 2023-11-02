@@ -1109,6 +1109,25 @@ header {
 .contacts-form {
     width: 570px;
 }
+input:focus, textarea:focus{
+    border: 2px solid #0DD1A2;
+    outline: none;
+}
+.incorrect,
+.incorrect{
+    border: 2px solid #F97676;
+    outline: none;
+}
+.correct,
+.correct{
+    border: 2px solid #1DC04B;
+    outline: none;
+}
+.icon-correct-value-name, .icon-incorrect-value-name,
+.icon-correct-value-phone, .icon-incorrect-value-phone{
+    position: absolute;
+    right:15%;
+}
 .contacts-form-text {
     margin-bottom: 12px;
 }
@@ -1396,6 +1415,9 @@ header {
     .page-header-container{
         z-index: 4;
     }
+    .error{
+        width: 200px;
+    }
 }
 
 @media (max-width: 320px) {
@@ -1406,12 +1428,12 @@ header {
         line-height: normal;
         margin-bottom: 0;
     }
-    .popup-p {
+    /* .popup-p {
         width: 300px;
     }
     .popup-confirmation p{
         width:300px;
-    }
+    } */
 }
 @media (max-height: 600px){
     .popup-is-work .page-header-container{

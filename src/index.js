@@ -42,19 +42,6 @@ for (const button of buttonOrder) {
         main.classList.remove('opacity-0');
     })
 };
-for (const button of buttonsSubmit) {
-    button.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        body.classList.add('popup-is-work');
-        popup.classList.add('d-none');
-        popupConfirmation.classList.remove('d-none');
-        popupBurger.classList.add('d-none');
-        buttonBurger.classList.remove('d-none');
-        buttonBurgerClose.classList.add('d-none');
-        body.classList.remove('popup-is-work-burger');
-        main.classList.remove('opacity-0');
-    })
-};
 
 for (const button of buttonClose) {
     button.addEventListener('click', () => {
