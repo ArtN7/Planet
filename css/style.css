@@ -1106,19 +1106,19 @@ input:focus, textarea:focus{
     outline: none;
 }
 .icon-correct-value-name, .icon-incorrect-value-name,
-.icon-correct-value-phone, .icon-incorrect-value-phone,
-.icon-correct-value-email, .icon-incorrect-value-email{
+.icon-correct-value-phone, .icon-incorrect-value-phone{
     position: absolute;
     right:15%;
 }
 .contacts-form-name-container .icon-correct-value-name, 
 .contacts-form-name-container .icon-incorrect-value-name{
-    right: 48%;
+    right: 290px;
+    position: absolute;
 }
-.icon-correct-value-email, .icon-incorrect-value-email{
-    right: 28%;
+.icon-incorrect-value-email, .icon-correct-value-email{
+    position: absolute;
+    right: 0;
 }
-
 .contacts-form-text {
     margin-bottom: 12px;
 }

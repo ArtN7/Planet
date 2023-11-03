@@ -101,9 +101,9 @@
               <h4 class ="contacts-form-text-title">Остались вопросы? Задайте их нам!</h4>
               <span class  = "contacts-form-text-span">Мы обязательно свяжемся с вами в течение двух рабочих дней</span>
             </div>
-            <div class = "contacts-block-form">
+            <div class = "contacts-block-form w-100 position-relative">
               <div class = "d-flex  mb-2 justify-content-between">
-                <div class="contacts-form-name-container">
+                <div class="contacts-form-name-container ">
                   <input type="text" class = "contacts-block-form-name p-3 field" placeholder="Ваше имя">
                   <svg xmlns="http://www.w3.org/2000/svg" class = "icon-correct-value-name d-none" width="46" height="46" viewBox="0 0 46 46" fill="none">
                     <path d="M17 23.6484L20.9079 28L29 19" stroke="#1DC04B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -126,6 +126,9 @@
               </div>
               <div class = "">
                 <textarea type="text" class = "contacts-block-form-interest p-3" placeholder="Что вас интересует?"></textarea>
+                <div id="contacts-textarea_error" class="error d-none text-center" style="color: #F97676;">
+                  Please fill in the field
+                </div>
               </div>
             </div>
             <button type="submit" class = "popup-submit contacts-form-button-send">Отправить</button>

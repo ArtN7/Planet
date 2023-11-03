@@ -68,10 +68,11 @@ formPopup.addEventListener('submit', validateFormPopup);
 const formContacts = document.querySelector('.contacts-form');
 const inputNameContacts = formContacts.querySelector('.contacts-block-form-name');
 const inputEmailContacts = formContacts.querySelector('.contacts-block-form-email');
-const iconCorrectContactsName = formContacts.querySelector('.icon-correct-value-name')
-const iconIncorrectContactsName = formContacts.querySelector('.icon-incorrect-value-name')
-const iconCorrectContactsEmail = formContacts.querySelector('.icon-correct-value-email')
-const iconIncorrectContactsEmail = formContacts.querySelector('.icon-incorrect-value-email')
+const textAreaContacts = formContacts.querySelector('.contacts-block-form-interest');
+const iconCorrectContactsName = formContacts.querySelector('.icon-correct-value-name');
+const iconIncorrectContactsName = formContacts.querySelector('.icon-incorrect-value-name');
+const iconCorrectContactsEmail = formContacts.querySelector('.icon-correct-value-email');
+const iconIncorrectContactsEmail = formContacts.querySelector('.icon-incorrect-value-email');
 const fieldsContacts = formContacts.querySelectorAll('.field');
 const validateEmail = (validate) => {
     const validEmail =  /^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -93,7 +94,6 @@ const validationContacts = (event) => {
         iconIncorrectContactsName.classList.add('d-none');
         document.getElementById('contacts-name_error').classList.add('d-none');
     }
-    
     const email = inputEmailContacts.value;
     if (!validateEmail(email)) {
         inputEmailContacts.classList.add('incorrect');
@@ -108,7 +108,15 @@ const validationContacts = (event) => {
         iconIncorrectContactsEmail.classList.add('d-none');
         document.getElementById('contacts-email_error').classList.add('d-none');
     }
-    if(validateName(name) && validateEmail(email)){
+    const textArea = textAreaContacts.value;
+    if (textArea === ""){
+        textAreaContacts.classList.add('incorrect');
+        document.getElementById('contacts-textarea_error').classList.remove('d-none');
+    } else {
+        textAreaContacts.classList.remove('incorrect');
+        document.getElementById('contacts-textarea_error').classList.add('d-none');
+    }
+    if(validateName(name) && validateEmail(email) && textArea !== ""){
         body.classList.add('popup-is-work');
         popup.classList.add('d-none');
         popupConfirmation.classList.remove('d-none');
